@@ -8,10 +8,10 @@ const Footer = () => {
         
         <div className="text-center md:text-left">
           <a href="#home" className="text-2xl font-bold tracking-tighter text-white mb-2 block">
-            PRASANTH <span className="text-neon">.</span>
+            PRASANTH S<span className="text-neon"></span>
           </a>
           <p className="text-gray-400 font-medium font-inter">
-            "Building scalable cloud solutions and intelligent systems"
+            Building scalable cloud solutions, smart web applications, and intelligent hardware systems
           </p>
         </div>
 

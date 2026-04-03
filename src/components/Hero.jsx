@@ -14,8 +14,8 @@ const Hero = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="space-y-6 text-center lg:text-left"
         >
-          <div className="inline-block py-1 px-3 rounded-full bg-neon/10 border border-neon/20 mb-4">
-            <span className="text-neon text-sm font-semibold tracking-wide uppercase">Available for work</span>
+          <div className="inline-block py-1 px-3 rounded-full bg-green-500/10 border border-green-500/20 mb-4">
+            <span className="text-green-400 text-sm font-semibold tracking-wide uppercase">Available for work</span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold leading-tight font-inter">
@@ -24,11 +24,11 @@ const Hero = () => {
           </h1>
           
           <h2 className="text-xl md:text-2xl text-gray-300 font-medium tracking-wide">
-            AWS Cloud & DevOps Engineer (Fresher)
+            AWS Cloud & DevOps Engineer | Software Engineer (Fresher)
           </h2>
           
           <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto lg:mx-0">
-            "Building scalable cloud solutions and intelligent systems"
+            Building scalable cloud solutions, smart web applications, and intelligent hardware systems.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center gap-4 text-gray-300 justify-center lg:justify-start">
@@ -47,10 +47,11 @@ const Hero = () => {
             </a>
             <a 
               href="/resume.pdf" 
-              download="Prasanth_S_Resume.pdf" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-3 rounded-xl bg-white/5 border border-white/10 text-white font-semibold hover:bg-white/10 transition-all transform hover:-translate-y-1"
             >
-              Download Resume
+              View Resume
             </a>
           </div>
 
@@ -69,9 +70,9 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative hidden lg:flex justify-center items-center"
+          className="relative flex justify-center items-center order-first lg:order-last mb-8 lg:mb-0"
         >
-          <div className="w-80 h-80 md:w-96 md:h-96 rounded-full relative overflow-hidden card-glow flex items-center justify-center border-4 border-white/10 group">
+          <div className="w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full relative overflow-hidden card-glow flex items-center justify-center border-4 border-white/10 group">
             {/* The profile image saved in the public folder */}
             <img 
               src="/profile.png" 
