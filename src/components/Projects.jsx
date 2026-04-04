@@ -18,6 +18,14 @@ const projects = [
     github: "#"
   },
   {
+    title: "PS TEX",
+    description: "Manager of the PS-TEX, overseeing professional textile operations and business management. Website: www.ps-tex.com",
+    tags: ["Management", "Textiles", "Business"],
+    demo: "http://www.ps-tex.com",
+    github: "#",
+    video: "/pstex.mp4"
+  },
+  {
     title: "SEED to CIRCUIT",
     description: "Agriculture project aiming to connect smart IoT circuitry and agricultural lifecycle for optimal yield predictions.",
     tags: ["IoT", "Arduino", "ThingSpeak", "C++"],
@@ -83,12 +91,25 @@ const ProjectCard = ({ project, idx }) => {
               className="w-full h-full object-cover"
             />
             <div className={`absolute inset-0 transition-opacity duration-300 flex items-center justify-center ${isPlaying ? 'bg-primary/40 opacity-0 group-hover:opacity-100' : 'bg-primary/60 opacity-100'}`}>
-              <button 
-                onClick={togglePlay} 
-                className="p-4 bg-neon/80 rounded-full text-white hover:bg-neon hover:scale-110 shadow-lg shadow-neon/50 transition-all"
-              >
-                {isPlaying ? <FiPause size={24} /> : <FiPlay size={24} className="ml-1" />}
-              </button>
+              <div className="flex gap-4">
+                <button 
+                  onClick={togglePlay} 
+                  className="p-4 bg-neon/80 rounded-full text-white hover:bg-neon hover:scale-110 shadow-lg shadow-neon/50 transition-all"
+                >
+                  {isPlaying ? <FiPause size={24} /> : <FiPlay size={24} className="ml-1" />}
+                </button>
+                {project.demo !== "#" && (
+                  <a 
+                    href={project.demo} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="p-4 bg-white/10 rounded-full text-white hover:bg-white/20 transition-all flex items-center justify-center self-center"
+                    title="View Live"
+                  >
+                    <FiExternalLink size={24} />
+                  </a>
+                )}
+              </div>
             </div>
           </>
         ) : (
@@ -98,7 +119,7 @@ const ProjectCard = ({ project, idx }) => {
               <a href={project.github} className="p-3 bg-white/10 rounded-full hover:bg-white/30 text-white transition">
                 <FiGithub size={20} />
               </a>
-              <a href={project.demo} className="p-3 bg-neon/20 rounded-full hover:bg-neon text-white transition border border-neon/50">
+              <a href={project.demo} target="_blank" rel="noopener noreferrer" className="p-3 bg-neon/20 rounded-full hover:bg-neon text-white transition border border-neon/50">
                 <FiExternalLink size={20} />
               </a>
             </div>
@@ -109,7 +130,12 @@ const ProjectCard = ({ project, idx }) => {
         <div>
           <h3 className="text-2xl font-bold mb-3 font-inter">{project.title}</h3>
           <p className="text-gray-400 text-sm leading-relaxed mb-6">
-            {project.description}
+            {project.description.includes("Website:") ? (
+              <>
+                {project.description.split("Website:")[0]}
+                Website: <a href={project.demo} target="_blank" rel="noopener noreferrer" className="text-neon hover:underline font-semibold cursor-pointer">{project.description.split("Website:")[1].trim()}</a>
+              </>
+            ) : project.description}
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
