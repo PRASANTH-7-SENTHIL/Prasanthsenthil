@@ -1,31 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Objective from './components/Objective';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Internship from './components/Internship';
-import Leadership from './components/Leadership';
-import Achievements from './components/Achievements';
-import Footer from './components/Footer';
 import RolePage from './components/RolePage';
-
-const PortfolioHome = () => (
-  <>
-    <Navbar />
-    <main className="flex-grow pt-20">
-      <Hero />
-      <Objective />
-      <Skills />
-      <Projects />
-      <Internship />
-      <Leadership />
-      <Achievements />
-    </main>
-    <Footer />
-  </>
-);
+import LandingPage from './components/LandingPage';
+import PortfolioPage from './components/PortfolioPage';
 
 function App() {
   return (
@@ -40,7 +17,8 @@ function App() {
 
         <div className="relative z-10 flex flex-col min-h-screen">
           <Routes>
-            <Route path="/" element={<PortfolioHome />} />
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/portfolio" element={<PortfolioPage />} />
             <Route path="/symposium" element={<RolePage title="Department Symposium President" roleDesc="Led the organization and execution of the annual department-level tech symposium." images={['/symposium/img-1.jpeg', '/symposium/img-2.jpeg', '/symposium/img-3.jpeg', '/symposium/img-4.jpeg', '/symposium/img-5.jpeg', '/symposium/img-6.jpeg', '/symposium/img-7.jpeg', '/symposium/img-8.jpeg', '/symposium/img-9.jpeg', '/symposium/img-10.jpeg', '/symposium/img-11.jpeg', '/symposium/img-12.jpeg', '/symposium/img-13.jpeg', '/symposium/img-14.jpeg', '/symposium/img-15.jpeg', '/symposium/img-16.jpeg', '/symposium/img-17.jpeg', '/symposium/img-18.jpeg', '/symposium/img-19.jpeg', '/symposium/img-20.jpeg', '/symposium/img-21.jpeg', '/symposium/img-22.jpeg', '/symposium/img-23.jpeg']} />} />
             <Route path="/quiz-department" element={<RolePage title="Department Quiz Coordinator" roleDesc="Coordinated logistics and question sets for the department-level technical quiz." />} />
             <Route path="/quiz-class" element={<RolePage title="Class Quiz Organizer" roleDesc="Organized engaging quiz sessions to foster knowledge sharing and healthy competition." />} />

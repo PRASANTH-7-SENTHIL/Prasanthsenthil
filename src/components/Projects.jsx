@@ -48,6 +48,14 @@ const projects = [
     github: "#"
   },
   {
+    title: "Weather Based Smart Education",
+    description: "A smart system integrating real-time weather data to optimize environments and scheduling.",
+    tags: ["React", "IoT", "Weather API"],
+    demo: "#",
+    github: "#",
+    video: "/weather-smart-education.mp4"
+  },
+  {
     title: "Smart City",
     description: "Dashboard monitoring multiple urban variables like traffic and pollution with data aggregated from edge devices.",
     tags: ["React", "AWS IoT", "Tailwind CSS"],
