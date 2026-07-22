@@ -535,7 +535,7 @@ const PortfolioPage = ({
                         <div className="horizontal-scroll-container">
                             <div className="glass-card rounded-2xl p-5 sm:p-6 text-left float-animation group horizontal-scroll-item">
                                 <div className="rounded-xl h-40 sm:h-48 mb-4 overflow-hidden border border-white/10 relative">
-                                    <video src="/pstex.mp4" autoPlay loop muted playsInline className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                    <video src="https://res.cloudinary.com/dguzreg8w/video/upload/v1784656652/portfolio/pstex.mp4" autoPlay loop muted playsInline webkit-playsinline="true" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                 </div>
                                 <h3 className="text-lg font-medium text-card-foreground mb-2 geist-font">PS TEX</h3>
                                 <p className="text-muted-foreground text-xs sm:text-sm inter-font mb-4">A comprehensive textile management system.</p>
@@ -573,7 +573,7 @@ const PortfolioPage = ({
                             {/* Weather Based Smart Education Video Project */}
                             <div className="glass-card rounded-2xl p-5 sm:p-6 text-left float-animation group relative overflow-hidden horizontal-scroll-item">
                                 <div className="rounded-xl h-40 sm:h-48 mb-4 overflow-hidden border border-white/10 relative">
-                                    <video src="/weather-smart-education.mp4" autoPlay loop muted playsInline className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                    <video src="https://media.githubusercontent.com/media/PRASANTH-7-SENTHIL/Prasanthsenthil/main/public/weather-smart-education.mp4" autoPlay loop muted playsInline webkit-playsinline="true" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                 </div>
                                 <h3 className="text-lg font-medium text-card-foreground mb-2 geist-font">Weather Based Smart Education System</h3>
                                 <p className="text-muted-foreground text-xs sm:text-sm inter-font mb-4">An IoT solution optimizing learning environments based on weather parameters.</p>

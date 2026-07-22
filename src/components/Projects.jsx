@@ -23,7 +23,7 @@ const projects = [
     tags: ["Management", "Textiles", "Business"],
     demo: "http://www.ps-tex.com",
     github: "#",
-    video: "/pstex.mp4"
+    video: "https://res.cloudinary.com/dguzreg8w/video/upload/v1784656652/portfolio/pstex.mp4"
   },
   {
     title: "SEED to CIRCUIT",
@@ -38,7 +38,7 @@ const projects = [
     tags: ["Home Automation", "Firebase", "ESP8266"],
     demo: "#",
     github: "#",
-    video: "/home.mp4"
+    video: "https://res.cloudinary.com/dguzreg8w/video/upload/v1784656570/portfolio/home.mp4"
   },
   {
     title: "LPG Gas Leakage Detector",
@@ -53,7 +53,7 @@ const projects = [
     tags: ["React", "IoT", "Weather API"],
     demo: "#",
     github: "#",
-    video: "/weather-smart-education.mp4"
+    video: "https://media.githubusercontent.com/media/PRASANTH-7-SENTHIL/Prasanthsenthil/main/public/weather-smart-education.mp4"
   },
   {
     title: "Smart City",
