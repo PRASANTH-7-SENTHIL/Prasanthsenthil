@@ -76,7 +76,7 @@ const BlurText = ({
   );
 };
 
-export default function LandingPage() {
+export default function LandingPage({ isEmbedded = false }) {
   const [isDark, setIsDark] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null);
@@ -114,7 +114,26 @@ export default function LandingPage() {
     }
   };
 
-  const menuItems = [
+  const handleExploreClick = () => {
+    if (isEmbedded) {
+      const portfolioSection = document.getElementById("portfolio-section");
+      if (portfolioSection) {
+        portfolioSection.scrollIntoView({ behavior: "smooth" });
+        return;
+      }
+    }
+    navigate("/portfolio");
+  };
+
+  const menuItems = isEmbedded ? [
+    { label: "PORTFOLIO", href: "#portfolio-section", highlight: true },
+    { label: "ABOUT", href: "#about" },
+    { label: "SKILLS", href: "#technical-skills" },
+    { label: "INTERNSHIP", href: "#internship" },
+    { label: "LEADERSHIP", href: "#leadership" },
+    { label: "PROJECTS", href: "#projects" },
+    { label: "MILESTONES", href: "#milestones" },
+  ] : [
     { label: "HOME", href: "/portfolio", highlight: true },
     { label: "ABOUT", href: "/portfolio#about" },
     { label: "PROJECTS", href: "/portfolio#projects" },
@@ -125,7 +144,7 @@ export default function LandingPage() {
 
   return (
     <div 
-      className="min-h-screen text-foreground transition-colors"
+      className="min-h-screen text-foreground transition-colors relative"
       style={{
         backgroundColor: isDark ? "hsl(0 0% 0%)" : "hsl(0 0% 98%)",
         color: isDark ? "hsl(0 0% 100%)" : "hsl(0 0% 10%)",
@@ -207,7 +226,7 @@ export default function LandingPage() {
       </header>
 
       {/* Hero Section */}
-      <main className="relative min-h-screen flex flex-col">
+      <main className="relative min-h-screen flex flex-col justify-between">
         {/* Centered Main Name */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full px-4">
           <style>{`
@@ -255,19 +274,19 @@ export default function LandingPage() {
         </div>
 
         {/* Tagline and Button */}
-        <div className="absolute bottom-16 sm:bottom-20 md:bottom-24 lg:bottom-28 xl:bottom-32 left-1/2 -translate-x-1/2 w-full px-6 flex flex-col items-center">
+        <div className="absolute bottom-8 sm:bottom-12 md:bottom-16 left-1/2 -translate-x-1/2 w-full px-6 flex flex-col items-center z-20">
           <BlurText
             text="Hii Innovators........."
             delay={150}
             animateBy="words"
             direction="top"
-            className="text-[15px] sm:text-[18px] md:text-[20px] lg:text-[22px] text-center transition-colors duration-300 text-neutral-500 hover:text-black dark:hover:text-white mb-6"
+            className="text-[15px] sm:text-[18px] md:text-[20px] lg:text-[22px] text-center transition-colors duration-300 text-neutral-500 hover:text-black dark:hover:text-white mb-4"
           />
           
           {/* Explore My Skills Button */}
           <button 
-            onClick={() => navigate('/portfolio')}
-            className="group relative px-6 py-3 font-semibold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
+            onClick={handleExploreClick}
+            className="group relative px-6 py-3 font-semibold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl cursor-pointer flex items-center gap-2"
             style={{ 
               backgroundColor: "#C3E41D", 
               color: "#000"
@@ -275,9 +294,20 @@ export default function LandingPage() {
           >
             <span className="relative z-10 flex items-center gap-2">
               Explore My Skills
-              <ChevronDown className="w-4 h-4 -rotate-90 group-hover:translate-x-1 transition-transform" />
+              <ChevronDown className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
             </span>
           </button>
+
+          {/* Bouncing Scroll Down Indicator */}
+          {isEmbedded && (
+            <div 
+              onClick={handleExploreClick}
+              className="mt-4 flex flex-col items-center gap-1 cursor-pointer text-muted-foreground hover:text-[#C3E41D] transition-colors animate-bounce"
+            >
+              <span className="text-xs tracking-widest uppercase font-semibold">Scroll Down</span>
+              <ChevronDown className="w-5 h-5 text-[#C3E41D]" />
+            </div>
+          )}
         </div>
 
       </main>

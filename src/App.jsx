@@ -4,6 +4,17 @@ import RolePage from './components/RolePage';
 import LandingPage from './components/LandingPage';
 import PortfolioPage from './components/PortfolioPage';
 
+const HomePage = () => {
+  return (
+    <div className="w-full flex flex-col">
+      <LandingPage isEmbedded={true} />
+      <div id="portfolio-section" className="w-full">
+        <PortfolioPage />
+      </div>
+    </div>
+  );
+};
+
 function App() {
   return (
     <Router>
@@ -17,7 +28,7 @@ function App() {
 
         <div className="relative z-10 flex flex-col min-h-screen">
           <Routes>
-            <Route path="/" element={<LandingPage />} />
+            <Route path="/" element={<HomePage />} />
             <Route path="/portfolio" element={<PortfolioPage />} />
             <Route path="/symposium" element={<RolePage title="Department Symposium President" roleDesc="Led the organization and execution of the annual department-level tech symposium." images={['/symposium/img-1.jpeg', '/symposium/img-2.jpeg', '/symposium/img-3.jpeg', '/symposium/img-4.jpeg', '/symposium/img-5.jpeg', '/symposium/img-6.jpeg', '/symposium/img-7.jpeg', '/symposium/img-8.jpeg', '/symposium/img-9.jpeg', '/symposium/img-10.jpeg', '/symposium/img-11.jpeg', '/symposium/img-12.jpeg', '/symposium/img-13.jpeg', '/symposium/img-14.jpeg', '/symposium/img-15.jpeg', '/symposium/img-16.jpeg', '/symposium/img-17.jpeg', '/symposium/img-18.jpeg', '/symposium/img-19.jpeg', '/symposium/img-20.jpeg', '/symposium/img-21.jpeg', '/symposium/img-22.jpeg', '/symposium/img-23.jpeg']} />} />
             <Route path="/quiz-department" element={<RolePage title="Department Quiz Coordinator" roleDesc="Coordinated logistics and question sets for the department-level technical quiz." />} />
