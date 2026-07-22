@@ -21,7 +21,7 @@ const projects = [
     title: "PS TEX",
     description: "Manager of the PS-TEX, overseeing professional textile operations and business management. Website: www.ps-tex.com",
     tags: ["Management", "Textiles", "Business"],
-    demo: "http://www.ps-tex.com",
+    demo: "https://ps-tex-production.up.railway.app",
     github: "#",
     video: "https://res.cloudinary.com/dguzreg8w/video/upload/v1784656652/portfolio/pstex.mp4"
   },
