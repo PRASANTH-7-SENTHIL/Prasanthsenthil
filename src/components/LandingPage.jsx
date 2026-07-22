@@ -79,12 +79,35 @@ const BlurText = ({
 export default function LandingPage({ isEmbedded = false }) {
   const [isDark, setIsDark] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showHeader, setShowHeader] = useState(true);
   const menuRef = useRef(null);
   const buttonRef = useRef(null);
   const navigate = useNavigate();
 
   useEffect(() => {
     document.documentElement.classList.add("dark");
+  }, []);
+
+  useEffect(() => {
+    let lastScrollY = 0;
+
+    const handleScrollState = () => {
+      const parentContainer = document.getElementById("main-scroll-container");
+      const currentScrollY = parentContainer ? parentContainer.scrollTop : window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        setShowHeader(false);
+      } else {
+        setShowHeader(true);
+      }
+      lastScrollY = currentScrollY;
+    };
+
+    const parentContainer = document.getElementById("main-scroll-container");
+    const target = parentContainer || window;
+
+    target.addEventListener("scroll", handleScrollState, { passive: true });
+    return () => target.removeEventListener("scroll", handleScrollState);
   }, []);
 
   useEffect(() => {
@@ -207,7 +230,7 @@ export default function LandingPage({ isEmbedded = false }) {
       }}
     >
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 px-6 py-6">
+      <header className={`fixed top-0 left-0 right-0 z-50 px-6 py-6 transition-transform duration-300 ${showHeader ? "translate-y-0" : "-translate-y-full"}`}>
         <nav className="flex items-center justify-between max-w-screen-2xl mx-auto">
           {/* Menu Button */}
           <div className="relative">
