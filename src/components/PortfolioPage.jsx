@@ -4,7 +4,8 @@ import { FiGithub, FiLinkedin } from 'react-icons/fi';
 import { 
   FaAws, FaServer, FaDatabase, FaUserShield, FaChartLine, FaNetworkWired, FaEnvelopeOpenText, FaProjectDiagram,
   FaCode, FaTools, FaLightbulb, FaFlask, FaUsers, FaUserTie, FaComments, FaHandsHelping, FaChartBar, FaCodeBranch,
-  FaPython, FaJs, FaHtml5, FaCss3Alt, FaReact, FaGit, FaGithub, FaDocker, FaLinux, FaWindows
+  FaPython, FaJs, FaHtml5, FaCss3Alt, FaReact, FaGit, FaGithub, FaDocker, FaLinux, FaWindows,
+  FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaArrowUp
 } from 'react-icons/fa';
 import { 
   SiFirebase, SiMysql, SiArduino, SiTwilio 
@@ -659,6 +660,83 @@ const PortfolioPage = ({
                 </div>
             </div>
         </main>
+
+        {/* Footer Section */}
+        <footer className="w-full border-t border-white/10 bg-black/40 backdrop-blur-lg py-12 px-4 sm:px-6 relative z-10">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+              
+              {/* Brand & About */}
+              <div className="md:col-span-1 flex flex-col space-y-4 text-left">
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 rounded-xl bg-[#C3E41D] text-black font-bold text-lg flex items-center justify-center shadow-[0_0_15px_rgba(195,228,29,0.4)]">
+                    PS
+                  </div>
+                  <span className="geist-font text-xl font-bold text-white tracking-wide">Prasanth S</span>
+                </div>
+                <p className="text-muted-foreground text-xs sm:text-sm inter-font leading-relaxed">
+                  AWS Cloud & DevOps Engineer | Software Engineer (Fresher) passionate about building scalable cloud solutions and innovative IoT systems.
+                </p>
+                <div className="flex items-center gap-3 pt-2">
+                  <a href="https://linkedin.com/in/prasanth-senthil-kumar-333s151/" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-300 hover:text-white hover:bg-[#0A66C2] transition-all border border-white/10">
+                    <FiLinkedin size={18} />
+                  </a>
+                  <a href="https://github.com/PRASANTH-7-SENTHIL" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-300 hover:text-white hover:bg-[#333] transition-all border border-white/10">
+                    <FiGithub size={18} />
+                  </a>
+                </div>
+              </div>
+
+              {/* Quick Links */}
+              <div className="flex flex-col space-y-3 text-left">
+                <h4 className="text-white font-bold geist-font text-base tracking-wide border-b border-white/10 pb-2">Quick Links</h4>
+                <a href="#about" className="text-muted-foreground hover:text-[#C3E41D] transition-colors text-xs sm:text-sm inter-font">About Me</a>
+                <a href="#technical-skills" className="text-muted-foreground hover:text-[#C3E41D] transition-colors text-xs sm:text-sm inter-font">Technical Skills</a>
+                <a href="#internship" className="text-muted-foreground hover:text-[#C3E41D] transition-colors text-xs sm:text-sm inter-font">Internship</a>
+                <a href="#leadership" className="text-muted-foreground hover:text-[#C3E41D] transition-colors text-xs sm:text-sm inter-font">Leadership</a>
+                <a href="#projects" className="text-muted-foreground hover:text-[#C3E41D] transition-colors text-xs sm:text-sm inter-font">Featured Projects</a>
+                <a href="#milestones" className="text-muted-foreground hover:text-[#C3E41D] transition-colors text-xs sm:text-sm inter-font">Milestones & Awards</a>
+              </div>
+
+              {/* Contact Info */}
+              <div className="flex flex-col space-y-3 text-left">
+                <h4 className="text-white font-bold geist-font text-base tracking-wide border-b border-white/10 pb-2">Contact Details</h4>
+                <div className="flex items-center gap-3 text-muted-foreground text-xs sm:text-sm inter-font">
+                  <FaEnvelope className="text-[#C3E41D] flex-shrink-0" />
+                  <a href="mailto:prasanthsenthilkumar09@gmail.com" className="hover:text-white transition-colors break-all">prasanthsenthilkumar09@gmail.com</a>
+                </div>
+                <div className="flex items-center gap-3 text-muted-foreground text-xs sm:text-sm inter-font">
+                  <FaPhoneAlt className="text-[#C3E41D] flex-shrink-0" />
+                  <a href="tel:+917200608333" className="hover:text-white transition-colors">+91 7200608333</a>
+                </div>
+                <div className="flex items-center gap-3 text-muted-foreground text-xs sm:text-sm inter-font">
+                  <FaMapMarkerAlt className="text-[#C3E41D] flex-shrink-0" />
+                  <span>Salem, Tamil Nadu, India</span>
+                </div>
+              </div>
+
+              {/* Resume & Call To Action */}
+              <div className="flex flex-col space-y-4 text-left">
+                <h4 className="text-white font-bold geist-font text-base tracking-wide border-b border-white/10 pb-2">Resume & Connect</h4>
+                <p className="text-muted-foreground text-xs sm:text-sm inter-font">
+                  Looking for a dedicated AWS Cloud & DevOps Engineer? Feel free to download my resume or get in touch!
+                </p>
+                <button onClick={() => window.open('/resume.pdf', '_blank')} className="primary-button px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold flex items-center justify-center gap-2 w-full">
+                  Download Resume
+                </button>
+              </div>
+
+            </div>
+
+            {/* Bottom Bar */}
+            <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-muted-foreground inter-font">
+              <p>© {new Date().getFullYear()} Prasanth Senthil Kumar. All rights reserved.</p>
+              <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="hover:text-[#C3E41D] transition-colors flex items-center gap-1">
+                Back to Top <FaArrowUp size={12} />
+              </button>
+            </div>
+          </div>
+        </footer>
       </div>
 
       {showCertificates && (
