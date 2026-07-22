@@ -579,6 +579,15 @@ const PortfolioPage = ({
                                 <p className="text-muted-foreground text-xs sm:text-sm inter-font mb-4">An IoT solution optimizing learning environments based on weather parameters.</p>
                             </div>
 
+                            {/* Smart Home Automation Video Project */}
+                            <div className="glass-card rounded-2xl p-5 sm:p-6 text-left float-animation group relative overflow-hidden horizontal-scroll-item" style={{ animationDelay: '0.1s' }}>
+                                <div className="rounded-xl h-40 sm:h-48 mb-4 overflow-hidden border border-white/10 relative">
+                                    <video src="https://res.cloudinary.com/dguzreg8w/video/upload/v1784656570/portfolio/home.mp4" autoPlay loop muted playsInline webkit-playsinline="true" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                </div>
+                                <h3 className="text-lg font-medium text-card-foreground mb-2 geist-font">Smart Home Automation</h3>
+                                <p className="text-muted-foreground text-xs sm:text-sm inter-font mb-4">IoT-based home automation allowing remote control of appliances.</p>
+                            </div>
+
                             {/* AI-Based Smart Irrigation */}
                             <div className="glass-card rounded-2xl p-5 sm:p-6 text-left float-animation group relative overflow-hidden horizontal-scroll-item" style={{ animationDelay: '0.2s' }}>
                                 <div className="rounded-xl h-40 sm:h-48 mb-4 overflow-hidden border border-white/10 relative">
