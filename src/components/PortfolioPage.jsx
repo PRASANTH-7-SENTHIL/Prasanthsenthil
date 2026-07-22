@@ -5,7 +5,7 @@ import {
   FaAws, FaServer, FaDatabase, FaUserShield, FaChartLine, FaNetworkWired, FaEnvelopeOpenText, FaProjectDiagram,
   FaCode, FaTools, FaLightbulb, FaFlask, FaUsers, FaUserTie, FaComments, FaHandsHelping, FaChartBar, FaCodeBranch,
   FaPython, FaJs, FaHtml5, FaCss3Alt, FaReact, FaGit, FaGithub, FaDocker, FaLinux, FaWindows,
-  FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaArrowUp
+  FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaArrowUp, FaPaperPlane
 } from 'react-icons/fa';
 import { 
   SiFirebase, SiMysql, SiArduino, SiTwilio 
@@ -285,6 +285,38 @@ const PortfolioPage = ({
             width: 350px;
           }
         }
+        @keyframes flyInPlane {
+          0% {
+            transform: translate(-350px, 250px) rotate(-30deg) scale(0.3);
+            opacity: 0;
+          }
+          70% {
+            transform: translate(-20px, -15px) rotate(15deg) scale(1.1);
+            opacity: 1;
+          }
+          100% {
+            transform: translate(0, 0) rotate(0deg) scale(1);
+            opacity: 1;
+          }
+        }
+        .paper-plane-fly {
+          animation: flyInPlane 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        @keyframes profileDetailsReveal {
+          0% {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .profile-details-animated {
+          opacity: 0;
+          animation: profileDetailsReveal 1.2s cubic-bezier(0.22, 1, 0.36, 1) 1.2s forwards;
+        }
       `}</style>
 
       {showAnimatedBackground && <AuroraBackground />}
@@ -307,36 +339,58 @@ const PortfolioPage = ({
         </nav>
         <main id="about" className="w-full min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 py-12 md:py-20 overflow-x-hidden">
             <div className="max-w-6xl w-full mx-auto text-center">
-                <div className="mb-8 float-animation flex flex-col items-center max-w-full">
-                    <div className="w-28 h-28 sm:w-36 sm:h-36 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white/10 mb-6 shadow-2xl">
-                      <img src="/profile.png" alt="Prasanth S" className="w-full h-full object-cover object-[center_top]" />
+                <div className="mb-8 flex flex-col items-center max-w-full">
+                    
+                    {/* Profile Picture with Flying Airplane on Left */}
+                    <div className="relative mb-6">
+                        {/* Flying White Paper Airplane on the left of profile picture */}
+                        <div className="absolute -left-12 sm:-left-16 top-1/2 -translate-y-1/2 z-20 paper-plane-fly pointer-events-none">
+                            <div className="relative flex items-center">
+                                {/* Flight dotted trail curve */}
+                                <svg className="absolute right-full top-1/2 -translate-y-1/2 w-24 sm:w-36 h-12 text-[#C3E41D]/60 pointer-events-none" viewBox="0 0 120 40" fill="none">
+                                    <path d="M0 35 Q 60 -10 120 20" stroke="currentColor" strokeWidth="2.5" strokeDasharray="5 5" />
+                                </svg>
+                                {/* White Airplane */}
+                                <div className="w-8 h-8 sm:w-10 sm:h-10 text-white drop-shadow-[0_0_15px_rgba(255,255,255,1)] transform -rotate-45">
+                                    <FaPaperPlane className="w-full h-full text-white" />
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Profile Image Circle */}
+                        <div className="w-28 h-28 sm:w-36 sm:h-36 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white/10 shadow-2xl float-animation">
+                          <img src="/profile.png" alt="Prasanth S" className="w-full h-full object-cover object-[center_top]" />
+                        </div>
                     </div>
 
-                    <div className="inline-block py-1 px-4 rounded-full bg-green-500/10 border border-green-500/20 mb-6">
-                      <span className="text-green-400 text-xs sm:text-sm font-semibold tracking-wide uppercase">Available for work</span>
-                    </div>
+                    {/* Profile Details (Reveals smoothly after airplane arrives) */}
+                    <div className="profile-details-animated flex flex-col items-center w-full">
+                        <div className="inline-block py-1 px-4 rounded-full bg-green-500/10 border border-green-500/20 mb-6">
+                          <span className="text-green-400 text-xs sm:text-sm font-semibold tracking-wide uppercase">Available for work</span>
+                        </div>
 
-                    <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1] geist-font font-bold text-foreground tracking-tight mb-4 break-words">
-                        Hi, I'm <br />
-                        <span className="gradient-text block tracking-tight mt-2">PRASANTH S</span>
-                    </h1>
+                        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1] geist-font font-bold text-foreground tracking-tight mb-4 break-words">
+                            Hi, I'm <br />
+                            <span className="gradient-text block tracking-tight mt-2">PRASANTH S</span>
+                        </h1>
 
-                    <h2 className="text-base sm:text-xl md:text-2xl text-gray-300 font-medium tracking-wide mb-4 geist-font max-w-full px-2 break-words">
-                        AWS Cloud & DevOps Engineer | Software Engineer (Fresher)
-                    </h2>
+                        <h2 className="text-base sm:text-xl md:text-2xl text-gray-300 font-medium tracking-wide mb-4 geist-font max-w-full px-2 break-words">
+                            AWS Cloud & DevOps Engineer | Software Engineer (Fresher)
+                        </h2>
 
-                    <p className="text-sm sm:text-lg md:text-xl max-w-2xl leading-relaxed inter-font font-light text-muted-foreground mx-auto mb-6 px-2 break-words">
-                        Building scalable cloud solutions, smart web applications, and intelligent hardware systems.
-                    </p>
+                        <p className="text-sm sm:text-lg md:text-xl max-w-2xl leading-relaxed inter-font font-light text-muted-foreground mx-auto mb-6 px-2 break-words">
+                            Building scalable cloud solutions, smart web applications, and intelligent hardware systems.
+                        </p>
 
-                    <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-gray-300 justify-center mb-6 inter-font text-xs sm:text-base max-w-full px-2">
-                        <span className="flex items-center gap-2 hover:text-white transition-colors">
-                            +91 7200608333
-                        </span>
-                        <span className="hidden sm:block text-[#C3E41D]">•</span>
-                        <span className="flex items-center gap-2 hover:text-white transition-colors break-all">
-                            prasanthsenthilkumar09@gmail.com
-                        </span>
+                        <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-gray-300 justify-center mb-6 inter-font text-xs sm:text-base max-w-full px-2">
+                            <span className="flex items-center gap-2 hover:text-white transition-colors">
+                                +91 7200608333
+                            </span>
+                            <span className="hidden sm:block text-[#C3E41D]">•</span>
+                            <span className="flex items-center gap-2 hover:text-white transition-colors break-all">
+                                prasanthsenthilkumar09@gmail.com
+                            </span>
+                        </div>
                     </div>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-4">
