@@ -230,6 +230,41 @@ const PortfolioPage = ({
           border-radius: 50%;
           transform: rotate(45deg);
         }
+
+        .horizontal-scroll-container {
+          display: flex;
+          overflow-x: auto;
+          gap: 1.25rem;
+          padding-bottom: 1rem;
+          padding-top: 0.5rem;
+          scroll-snap-type: x mandatory;
+          scroll-behavior: smooth;
+          -webkit-overflow-scrolling: touch;
+        }
+        .horizontal-scroll-container::-webkit-scrollbar {
+          height: 6px;
+        }
+        .horizontal-scroll-container::-webkit-scrollbar-track {
+          background: rgba(255, 255, 255, 0.05);
+          border-radius: 10px;
+        }
+        .horizontal-scroll-container::-webkit-scrollbar-thumb {
+          background: rgba(195, 228, 29, 0.4);
+          border-radius: 10px;
+        }
+        .horizontal-scroll-container::-webkit-scrollbar-thumb:hover {
+          background: rgba(195, 228, 29, 0.8);
+        }
+        .horizontal-scroll-item {
+          flex: 0 0 auto;
+          width: 290px;
+          scroll-snap-align: start;
+        }
+        @media (min-width: 640px) {
+          .horizontal-scroll-item {
+            width: 350px;
+          }
+        }
       `}</style>
 
       {showAnimatedBackground && <AuroraBackground />}
@@ -314,11 +349,11 @@ const PortfolioPage = ({
                 <div className="divider mb-16" />
 
                 <div id="technical-skills" className="max-w-6xl mx-auto mb-16 px-4 sm:px-6">
-                    <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-8 geist-font text-center">
-                        Technical Skills
+                    <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-8 geist-font text-center flex items-center justify-center gap-2">
+                        Technical Skills <span className="text-xs font-normal text-muted-foreground inter-font">(Scroll &rarr;)</span>
                     </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-                        <div className="glass-card p-5 sm:p-6 rounded-2xl text-left">
+                    <div className="horizontal-scroll-container">
+                        <div className="glass-card p-5 sm:p-6 rounded-2xl text-left horizontal-scroll-item">
                             <h3 className="text-lg sm:text-xl font-semibold mb-4 text-[#C3E41D] geist-font flex items-center gap-2"><FaAws /> AWS Cloud & DevOps</h3>
                             <div className="flex flex-wrap gap-2">
                                 {[
@@ -333,7 +368,7 @@ const PortfolioPage = ({
                             </div>
                         </div>
                         
-                        <div className="glass-card p-5 sm:p-6 rounded-2xl text-left">
+                        <div className="glass-card p-5 sm:p-6 rounded-2xl text-left horizontal-scroll-item">
                             <h3 className="text-lg sm:text-xl font-semibold mb-4 text-[#C3E41D] geist-font flex items-center gap-2"><FaCode /> Programming</h3>
                             <div className="flex flex-wrap gap-2">
                                 {[
@@ -347,7 +382,7 @@ const PortfolioPage = ({
                             </div>
                         </div>
 
-                        <div className="glass-card p-5 sm:p-6 rounded-2xl text-left">
+                        <div className="glass-card p-5 sm:p-6 rounded-2xl text-left horizontal-scroll-item">
                             <h3 className="text-lg sm:text-xl font-semibold mb-4 text-[#C3E41D] geist-font flex items-center gap-2"><FaDatabase /> Databases</h3>
                             <div className="flex flex-wrap gap-2">
                                 {[
@@ -360,7 +395,7 @@ const PortfolioPage = ({
                             </div>
                         </div>
 
-                        <div className="glass-card p-5 sm:p-6 rounded-2xl text-left">
+                        <div className="glass-card p-5 sm:p-6 rounded-2xl text-left horizontal-scroll-item">
                             <h3 className="text-lg sm:text-xl font-semibold mb-4 text-[#C3E41D] geist-font flex items-center gap-2"><FaTools /> Tools</h3>
                             <div className="flex flex-wrap gap-2">
                                 {[
@@ -375,7 +410,7 @@ const PortfolioPage = ({
                             </div>
                         </div>
 
-                        <div className="glass-card p-5 sm:p-6 rounded-2xl text-left lg:col-span-2">
+                        <div className="glass-card p-5 sm:p-6 rounded-2xl text-left horizontal-scroll-item">
                             <h3 className="text-lg sm:text-xl font-semibold mb-4 text-[#C3E41D] geist-font flex items-center gap-2"><FaLightbulb /> Other Skills</h3>
                             <div className="flex flex-wrap gap-2">
                                 {[
@@ -420,13 +455,13 @@ const PortfolioPage = ({
 
                 {/* Leadership Section */}
                 <div id="leadership" className="max-w-7xl mx-auto mb-16 px-4 sm:px-6">
-                    <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-8 md:mb-12 geist-font text-center">
-                        Leadership & Coordinating
+                    <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-8 md:mb-12 geist-font text-center flex items-center justify-center gap-2">
+                        Leadership & Coordinating <span className="text-xs font-normal text-muted-foreground inter-font">(Scroll &rarr;)</span>
                     </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                    <div className="horizontal-scroll-container">
                         
                         {/* 1. Symposium President */}
-                        <div className="glass-card p-5 sm:p-6 rounded-2xl text-left float-animation group relative overflow-hidden">
+                        <div className="glass-card p-5 sm:p-6 rounded-2xl text-left float-animation group relative overflow-hidden horizontal-scroll-item">
                             <h3 className="text-lg sm:text-xl font-bold text-[#C3E41D] geist-font mb-2">Department Symposium President</h3>
                             <p className="text-muted-foreground text-xs sm:text-sm inter-font mb-6">Led the organization and execution of the annual department-level tech symposium.</p>
                             <button onClick={() => setPhotoModal({
@@ -439,19 +474,19 @@ const PortfolioPage = ({
                         </div>
 
                         {/* 2. Quiz Coordinator */}
-                        <div className="glass-card p-5 sm:p-6 rounded-2xl text-left float-animation group relative overflow-hidden" style={{ animationDelay: '0.2s' }}>
+                        <div className="glass-card p-5 sm:p-6 rounded-2xl text-left float-animation group relative overflow-hidden horizontal-scroll-item" style={{ animationDelay: '0.2s' }}>
                             <h3 className="text-lg sm:text-xl font-bold text-[#C3E41D] geist-font mb-2">Department Quiz Coordinator</h3>
                             <p className="text-muted-foreground text-xs sm:text-sm inter-font mb-4">Coordinated logistics and question sets for the department-level technical quiz.</p>
                         </div>
 
                         {/* 3. Class Quiz Organizer */}
-                        <div className="glass-card p-5 sm:p-6 rounded-2xl text-left float-animation group relative overflow-hidden" style={{ animationDelay: '0.4s' }}>
+                        <div className="glass-card p-5 sm:p-6 rounded-2xl text-left float-animation group relative overflow-hidden horizontal-scroll-item" style={{ animationDelay: '0.4s' }}>
                             <h3 className="text-lg sm:text-xl font-bold text-[#C3E41D] geist-font mb-2">Class Quiz Organizer</h3>
                             <p className="text-muted-foreground text-xs sm:text-sm inter-font mb-4">Organized engaging quiz sessions to foster knowledge sharing and healthy competition.</p>
                         </div>
 
                         {/* 4. Cricket Team Captain */}
-                        <div className="glass-card p-5 sm:p-6 rounded-2xl text-left float-animation group relative overflow-hidden" style={{ animationDelay: '0.6s' }}>
+                        <div className="glass-card p-5 sm:p-6 rounded-2xl text-left float-animation group relative overflow-hidden horizontal-scroll-item" style={{ animationDelay: '0.6s' }}>
                             <h3 className="text-lg sm:text-xl font-bold text-[#C3E41D] geist-font mb-2">Inter-College Cricket Team Captain</h3>
                             <p className="text-muted-foreground text-xs sm:text-sm inter-font mb-6">Captained the college cricket team, strategizing matches and leading to victories.</p>
                             <button onClick={() => setPhotoModal({
@@ -474,16 +509,19 @@ const PortfolioPage = ({
                     
                     {/* Software Projects */}
                     <div className="mb-16">
-                        <h3 className="text-xl sm:text-2xl font-semibold mb-6 text-[#C3E41D] geist-font border-b border-white/10 pb-2">Software Projects</h3>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-                            <div className="glass-card rounded-2xl p-5 sm:p-6 text-left float-animation group">
+                        <h3 className="text-xl sm:text-2xl font-semibold mb-6 text-[#C3E41D] geist-font border-b border-white/10 pb-2 flex items-center justify-between">
+                            <span>Software Projects</span>
+                            <span className="text-xs font-normal text-muted-foreground inter-font">(Scroll &rarr;)</span>
+                        </h3>
+                        <div className="horizontal-scroll-container">
+                            <div className="glass-card rounded-2xl p-5 sm:p-6 text-left float-animation group horizontal-scroll-item">
                                 <div className="rounded-xl h-40 sm:h-48 mb-4 overflow-hidden border border-white/10 relative">
                                     <video src="/pstex.mp4" autoPlay loop muted playsInline className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                 </div>
                                 <h3 className="text-lg font-medium text-card-foreground mb-2 geist-font">PS TEX</h3>
                                 <p className="text-muted-foreground text-xs sm:text-sm inter-font mb-4">A comprehensive textile management system.</p>
                             </div>
-                            <a href="https://ai-smart-education-system-1egk.vercel.app/" target="_blank" rel="noopener noreferrer" className="block cursor-pointer">
+                            <a href="https://ai-smart-education-system-1egk.vercel.app/" target="_blank" rel="noopener noreferrer" className="block cursor-pointer horizontal-scroll-item">
                                 <div className="glass-card rounded-2xl p-5 sm:p-6 text-left float-animation group h-full" style={{ animationDelay: '0.2s' }}>
                                     <div className="rounded-xl h-40 sm:h-48 mb-4 overflow-hidden border border-white/10 relative">
                                         <img src="/ai-smart-education.png" alt="Smart Education" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
@@ -492,7 +530,7 @@ const PortfolioPage = ({
                                     <p className="text-muted-foreground text-xs sm:text-sm inter-font mb-4">A smart platform integrating real-time weather data and AI.</p>
                                 </div>
                             </a>
-                            <div className="glass-card rounded-2xl p-5 sm:p-6 text-left float-animation group" style={{ animationDelay: '0.4s' }}>
+                            <div className="glass-card rounded-2xl p-5 sm:p-6 text-left float-animation group horizontal-scroll-item" style={{ animationDelay: '0.4s' }}>
                                 <div className="rounded-xl h-40 sm:h-48 mb-4 overflow-hidden border border-white/10 relative">
                                     <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800" alt="Smart Employee" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                 </div>
@@ -507,11 +545,14 @@ const PortfolioPage = ({
 
                     {/* Hardware & IoT Projects */}
                     <div>
-                        <h3 className="text-xl sm:text-2xl font-semibold mb-6 text-[#C3E41D] geist-font border-b border-white/10 pb-2">Hardware Projects</h3>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                        <h3 className="text-xl sm:text-2xl font-semibold mb-6 text-[#C3E41D] geist-font border-b border-white/10 pb-2 flex items-center justify-between">
+                            <span>Hardware Projects</span>
+                            <span className="text-xs font-normal text-muted-foreground inter-font">(Scroll &rarr;)</span>
+                        </h3>
+                        <div className="horizontal-scroll-container">
                             
                             {/* Weather Based Smart Education Video Project */}
-                            <div className="glass-card rounded-2xl p-5 sm:p-6 text-left float-animation group relative overflow-hidden">
+                            <div className="glass-card rounded-2xl p-5 sm:p-6 text-left float-animation group relative overflow-hidden horizontal-scroll-item">
                                 <div className="rounded-xl h-40 sm:h-48 mb-4 overflow-hidden border border-white/10 relative">
                                     <video src="/weather-smart-education.mp4" autoPlay loop muted playsInline className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                 </div>
@@ -520,7 +561,7 @@ const PortfolioPage = ({
                             </div>
 
                             {/* AI-Based Smart Irrigation */}
-                            <div className="glass-card rounded-2xl p-5 sm:p-6 text-left float-animation group relative overflow-hidden" style={{ animationDelay: '0.2s' }}>
+                            <div className="glass-card rounded-2xl p-5 sm:p-6 text-left float-animation group relative overflow-hidden horizontal-scroll-item" style={{ animationDelay: '0.2s' }}>
                                 <div className="rounded-xl h-40 sm:h-48 mb-4 overflow-hidden border border-white/10 relative">
                                     <img src="https://images.unsplash.com/photo-1563514227147-6d2ff665a6a0?auto=format&fit=crop&q=80&w=800" alt="Smart Irrigation" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                 </div>
@@ -529,7 +570,7 @@ const PortfolioPage = ({
                             </div>
 
                             {/* LPG Gas Leakage Detector */}
-                            <div className="glass-card rounded-2xl p-5 sm:p-6 text-left float-animation group relative overflow-hidden" style={{ animationDelay: '0.4s' }}>
+                            <div className="glass-card rounded-2xl p-5 sm:p-6 text-left float-animation group relative overflow-hidden horizontal-scroll-item" style={{ animationDelay: '0.4s' }}>
                                 <div className="rounded-xl h-40 sm:h-48 mb-4 overflow-hidden border border-white/10 relative">
                                     <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=800" alt="LPG Gas Leakage Detector" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                 </div>
