@@ -72,9 +72,9 @@ const defaultData = {
 
 // --- GLOWING WAVY DIVIDER COMPONENT ---
 const GlowingWavyDivider = () => (
-  <div className="w-full overflow-hidden my-12 md:my-16 flex items-center justify-center relative z-10 px-4">
+  <div className="w-screen relative left-1/2 -translate-x-1/2 overflow-hidden my-8 md:my-14 flex items-center justify-center pointer-events-none z-10">
     <svg 
-      className="w-full max-w-5xl h-6 sm:h-8 text-[#C3E41D] drop-shadow-[0_0_12px_#C3E41D]" 
+      className="w-full h-8 sm:h-12 text-[#C3E41D] drop-shadow-[0_0_15px_#C3E41D]" 
       viewBox="0 0 1200 120" 
       preserveAspectRatio="none"
       fill="none" 
@@ -83,8 +83,7 @@ const GlowingWavyDivider = () => (
       <path 
         d="M0,60 C150,110 350,10 600,60 C850,110 1050,10 1200,60" 
         stroke="currentColor" 
-        strokeWidth="6" 
-        strokeLinecap="round" 
+        strokeWidth="8" 
       />
     </svg>
   </div>
