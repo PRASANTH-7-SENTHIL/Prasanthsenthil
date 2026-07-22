@@ -202,8 +202,8 @@ export default function LandingPage({ isEmbedded = false }) {
           </div>
 
           {/* Signature */}
-          <div className="text-4xl font-bold" style={{ color: isDark ? "hsl(0 0% 100%)" : "hsl(0 0% 10%)" }}>
-            P
+          <div className="text-xl sm:text-2xl font-bold tracking-wider uppercase geist-font" style={{ color: isDark ? "hsl(0 0% 100%)" : "hsl(0 0% 10%)" }}>
+            PRASANTH S
           </div>
 
           {/* Theme Toggle */}
