@@ -70,6 +70,26 @@ const defaultData = {
   stats: [ { value: '10+', label: 'Projects Completed' }, { value: '2+', label: 'Years Experience' }, { value: '3+', label: 'Hackathons Won' }, ],
 };
 
+// --- GLOWING WAVY DIVIDER COMPONENT ---
+const GlowingWavyDivider = () => (
+  <div className="w-full overflow-hidden my-12 md:my-16 flex items-center justify-center relative z-10 px-4">
+    <svg 
+      className="w-full max-w-5xl h-6 sm:h-8 text-[#C3E41D] drop-shadow-[0_0_12px_#C3E41D]" 
+      viewBox="0 0 1200 120" 
+      preserveAspectRatio="none"
+      fill="none" 
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path 
+        d="M0,60 C150,110 350,10 600,60 C850,110 1050,10 1200,60" 
+        stroke="currentColor" 
+        strokeWidth="6" 
+        strokeLinecap="round" 
+      />
+    </svg>
+  </div>
+);
+
 // --- MAIN CUSTOMIZABLE PORTFOLIO COMPONENT ---
 const PortfolioPage = ({
   logo = defaultData.logo,
@@ -286,7 +306,7 @@ const PortfolioPage = ({
                 <button onClick={resume.onClick} className="glass-button px-4 py-2 rounded-lg text-foreground text-sm font-medium inter-font">{resume.label}</button>
             </div>
         </nav>
-        <div className="divider" />
+        <GlowingWavyDivider />
         <main id="about" className="w-full min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 py-12 md:py-20 overflow-x-hidden">
             <div className="max-w-6xl w-full mx-auto text-center">
                 <div className="mb-8 float-animation flex flex-col items-center max-w-full">
@@ -347,7 +367,7 @@ const PortfolioPage = ({
                     </p>
                 </div>
 
-                <div className="divider mb-16" />
+                <GlowingWavyDivider />
 
                 <div id="technical-skills" className="max-w-6xl mx-auto mb-16 px-4 sm:px-6">
                     <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-8 geist-font text-center flex items-center justify-center gap-2">
@@ -428,7 +448,7 @@ const PortfolioPage = ({
                     </div>
                 </div>
 
-                <div className="divider mb-16" />
+                <GlowingWavyDivider />
 
                 {/* Internship Experience */}
                 <div id="internship" className="max-w-6xl mx-auto mb-16 px-4 sm:px-6">
@@ -452,7 +472,7 @@ const PortfolioPage = ({
                     </div>
                 </div>
 
-                <div className="divider mb-16" />
+                <GlowingWavyDivider />
 
                 {/* Leadership Section */}
                 <div id="leadership" className="max-w-7xl mx-auto mb-16 px-4 sm:px-6">
@@ -502,7 +522,7 @@ const PortfolioPage = ({
                     </div>
                 </div>
 
-                <div className="divider mb-16" />
+                <GlowingWavyDivider />
                 <div id="projects" className="max-w-7xl mx-auto mb-16 px-4 sm:px-6">
                     <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-8 md:mb-12 geist-font text-center">
                         Featured Projects
@@ -582,7 +602,7 @@ const PortfolioPage = ({
                         </div>
                     </div>
                 </div>
-                <div className="divider mb-16" />
+                <GlowingWavyDivider />
 
                 {/* Milestones & Awards */}
                 <div id="milestones" className="max-w-6xl mx-auto mb-24 md:mb-32 px-4 sm:px-6 relative mt-16 md:mt-20">
@@ -646,7 +666,7 @@ const PortfolioPage = ({
                     </div>
                 </div>
 
-                <div className="divider mb-16" />
+                <GlowingWavyDivider />
                 <div id="skills" className="flex flex-col sm:flex-row justify-center items-center gap-8 text-center mb-16">
                     {stats.map((stat, index) => (
                         <React.Fragment key={stat.label}>
