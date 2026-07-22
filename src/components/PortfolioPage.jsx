@@ -251,45 +251,45 @@ const PortfolioPage = ({
             </div>
         </nav>
         <div className="divider" />
-        <main id="about" className="w-full min-h-screen flex flex-col items-center justify-center px-6 py-20">
-            <div className="max-w-6xl mx-auto text-center">
-                <div className="mb-8 float-animation flex flex-col items-center">
-                    <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white/10 mb-6 shadow-2xl">
+        <main id="about" className="w-full min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 py-12 md:py-20 overflow-x-hidden">
+            <div className="max-w-6xl w-full mx-auto text-center">
+                <div className="mb-8 float-animation flex flex-col items-center max-w-full">
+                    <div className="w-28 h-28 sm:w-36 sm:h-36 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white/10 mb-6 shadow-2xl">
                       <img src="/profile.png" alt="Prasanth S" className="w-full h-full object-cover object-[center_top]" />
                     </div>
 
                     <div className="inline-block py-1 px-4 rounded-full bg-green-500/10 border border-green-500/20 mb-6">
-                      <span className="text-green-400 text-sm font-semibold tracking-wide uppercase">Available for work</span>
+                      <span className="text-green-400 text-xs sm:text-sm font-semibold tracking-wide uppercase">Available for work</span>
                     </div>
 
-                    <h1 className="md:text-6xl lg:text-7xl leading-[1.1] geist-font text-5xl font-bold text-foreground tracking-tight mb-4">
+                    <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1] geist-font font-bold text-foreground tracking-tight mb-4 break-words">
                         Hi, I'm <br />
                         <span className="gradient-text block tracking-tight mt-2">PRASANTH S</span>
                     </h1>
 
-                    <h2 className="text-xl md:text-2xl text-gray-300 font-medium tracking-wide mb-4 geist-font">
+                    <h2 className="text-base sm:text-xl md:text-2xl text-gray-300 font-medium tracking-wide mb-4 geist-font max-w-full px-2 break-words">
                         AWS Cloud & DevOps Engineer | Software Engineer (Fresher)
                     </h2>
 
-                    <p className="md:text-xl max-w-2xl leading-relaxed inter-font text-lg font-light text-muted-foreground mx-auto mb-6">
+                    <p className="text-sm sm:text-lg md:text-xl max-w-2xl leading-relaxed inter-font font-light text-muted-foreground mx-auto mb-6 px-2 break-words">
                         Building scalable cloud solutions, smart web applications, and intelligent hardware systems.
                     </p>
 
-                    <div className="flex flex-col sm:flex-row items-center gap-4 text-gray-300 justify-center mb-6 inter-font">
+                    <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-gray-300 justify-center mb-6 inter-font text-xs sm:text-base max-w-full px-2">
                         <span className="flex items-center gap-2 hover:text-white transition-colors">
                             +91 7200608333
                         </span>
                         <span className="hidden sm:block text-[#C3E41D]">•</span>
-                        <span className="flex items-center gap-2 hover:text-white transition-colors">
+                        <span className="flex items-center gap-2 hover:text-white transition-colors break-all">
                             prasanthsenthilkumar09@gmail.com
                         </span>
                     </div>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-4">
-                    <button onClick={() => { window.location.hash = '#projects'; }} className="primary-button px-6 py-3 rounded-lg font-medium text-sm min-w-[160px]">
+                    <button onClick={() => { window.location.hash = '#projects'; }} className="primary-button px-6 py-3 rounded-lg font-medium text-sm w-full sm:w-auto min-w-[160px]">
                       View Projects
                     </button>
-                    <button onClick={() => window.open('/resume.pdf', '_blank')} className="glass-button min-w-[160px] inter-font text-sm font-medium text-foreground rounded-lg px-6 py-3">
+                    <button onClick={() => window.open('/resume.pdf', '_blank')} className="glass-button w-full sm:w-auto min-w-[160px] inter-font text-sm font-medium text-foreground rounded-lg px-6 py-3">
                       View Resume
                     </button>
                 </div>
@@ -302,89 +302,89 @@ const PortfolioPage = ({
                     </a>
                 </div>
                 
-                <div className="max-w-4xl mx-auto mb-16 px-6 float-animation">
-                    <h2 className="text-3xl font-bold text-foreground mb-4 geist-font text-center">
+                <div className="max-w-4xl mx-auto mb-16 px-4 sm:px-6 float-animation">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4 geist-font text-center">
                         Career Objective
                     </h2>
-                    <p className="text-lg leading-relaxed inter-font text-muted-foreground text-center glass-card p-8 rounded-2xl">
+                    <p className="text-sm sm:text-lg leading-relaxed inter-font text-muted-foreground text-center glass-card p-5 sm:p-8 rounded-2xl">
                         "Aspiring AWS Cloud and DevOps engineer with a strong interest in software development, seeking an opportunity to apply my skills in cloud computing, automation, and scalable system development to build innovative solutions."
                     </p>
                 </div>
 
                 <div className="divider mb-16" />
 
-                <div id="technical-skills" className="max-w-6xl mx-auto mb-16 px-6">
-                    <h2 className="text-3xl font-bold text-foreground mb-8 geist-font text-center">
+                <div id="technical-skills" className="max-w-6xl mx-auto mb-16 px-4 sm:px-6">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-8 geist-font text-center">
                         Technical Skills
                     </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <div className="glass-card p-6 rounded-2xl text-left">
-                            <h3 className="text-xl font-semibold mb-4 text-[#C3E41D] geist-font flex items-center gap-2"><FaAws /> AWS Cloud & DevOps</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                        <div className="glass-card p-5 sm:p-6 rounded-2xl text-left">
+                            <h3 className="text-lg sm:text-xl font-semibold mb-4 text-[#C3E41D] geist-font flex items-center gap-2"><FaAws /> AWS Cloud & DevOps</h3>
                             <div className="flex flex-wrap gap-2">
                                 {[
                                     {name: "EC2", icon: <FaServer />}, {name: "S3", icon: <FaDatabase />}, {name: "IAM", icon: <FaUserShield />}, 
                                     {name: "CloudWatch", icon: <FaChartLine />}, {name: "VPC", icon: <FaNetworkWired />}, {name: "RDS", icon: <FaDatabase />}, 
                                     {name: "SNS", icon: <FaEnvelopeOpenText />}, {name: "Lambda", icon: <FaAws />}, {name: "CI/CD Pipeline", icon: <FaProjectDiagram />}
                                 ].map(skill => (
-                                    <span key={skill.name} className="skill-badge px-3 py-1.5 rounded-md text-sm text-muted-foreground inter-font flex items-center gap-2">
+                                    <span key={skill.name} className="skill-badge px-3 py-1.5 rounded-md text-xs sm:text-sm text-muted-foreground inter-font flex items-center gap-2">
                                         <span className="text-[#C3E41D]">{skill.icon}</span> {skill.name}
                                     </span>
                                 ))}
                             </div>
                         </div>
                         
-                        <div className="glass-card p-6 rounded-2xl text-left">
-                            <h3 className="text-xl font-semibold mb-4 text-[#C3E41D] geist-font flex items-center gap-2"><FaCode /> Programming</h3>
+                        <div className="glass-card p-5 sm:p-6 rounded-2xl text-left">
+                            <h3 className="text-lg sm:text-xl font-semibold mb-4 text-[#C3E41D] geist-font flex items-center gap-2"><FaCode /> Programming</h3>
                             <div className="flex flex-wrap gap-2">
                                 {[
                                     {name: "Python", icon: <FaPython />}, {name: "JavaScript", icon: <FaJs />}, {name: "HTML", icon: <FaHtml5 />}, 
                                     {name: "CSS", icon: <FaCss3Alt />}, {name: "React", icon: <FaReact />}
                                 ].map(skill => (
-                                    <span key={skill.name} className="skill-badge px-3 py-1.5 rounded-md text-sm text-muted-foreground inter-font flex items-center gap-2">
+                                    <span key={skill.name} className="skill-badge px-3 py-1.5 rounded-md text-xs sm:text-sm text-muted-foreground inter-font flex items-center gap-2">
                                         <span className="text-blue-400">{skill.icon}</span> {skill.name}
                                     </span>
                                 ))}
                             </div>
                         </div>
 
-                        <div className="glass-card p-6 rounded-2xl text-left">
-                            <h3 className="text-xl font-semibold mb-4 text-[#C3E41D] geist-font flex items-center gap-2"><FaDatabase /> Databases</h3>
+                        <div className="glass-card p-5 sm:p-6 rounded-2xl text-left">
+                            <h3 className="text-lg sm:text-xl font-semibold mb-4 text-[#C3E41D] geist-font flex items-center gap-2"><FaDatabase /> Databases</h3>
                             <div className="flex flex-wrap gap-2">
                                 {[
                                     {name: "Firebase", icon: <SiFirebase />}, {name: "MySQL", icon: <SiMysql />}, {name: "SQL", icon: <FaDatabase />}
                                 ].map(skill => (
-                                    <span key={skill.name} className="skill-badge px-3 py-1.5 rounded-md text-sm text-muted-foreground inter-font flex items-center gap-2">
+                                    <span key={skill.name} className="skill-badge px-3 py-1.5 rounded-md text-xs sm:text-sm text-muted-foreground inter-font flex items-center gap-2">
                                         <span className="text-orange-400">{skill.icon}</span> {skill.name}
                                     </span>
                                 ))}
                             </div>
                         </div>
 
-                        <div className="glass-card p-6 rounded-2xl text-left">
-                            <h3 className="text-xl font-semibold mb-4 text-[#C3E41D] geist-font flex items-center gap-2"><FaTools /> Tools</h3>
+                        <div className="glass-card p-5 sm:p-6 rounded-2xl text-left">
+                            <h3 className="text-lg sm:text-xl font-semibold mb-4 text-[#C3E41D] geist-font flex items-center gap-2"><FaTools /> Tools</h3>
                             <div className="flex flex-wrap gap-2">
                                 {[
                                     {name: "Git", icon: <FaGit />}, {name: "GitHub", icon: <FaGithub />}, {name: "Docker", icon: <FaDocker />}, 
                                     {name: "VS Code", icon: <FaCode />}, {name: "Arduino IDE", icon: <SiArduino />}, 
                                     {name: "ThingSpeak", icon: <FaChartBar />}, {name: "Twilio", icon: <SiTwilio />}, {name: "N8N", icon: <FaCodeBranch />}
                                 ].map(skill => (
-                                    <span key={skill.name} className="skill-badge px-3 py-1.5 rounded-md text-sm text-muted-foreground inter-font flex items-center gap-2">
+                                    <span key={skill.name} className="skill-badge px-3 py-1.5 rounded-md text-xs sm:text-sm text-muted-foreground inter-font flex items-center gap-2">
                                         <span className="text-purple-400">{skill.icon}</span> {skill.name}
                                     </span>
                                 ))}
                             </div>
                         </div>
 
-                        <div className="glass-card p-6 rounded-2xl text-left lg:col-span-2">
-                            <h3 className="text-xl font-semibold mb-4 text-[#C3E41D] geist-font flex items-center gap-2"><FaLightbulb /> Other Skills</h3>
+                        <div className="glass-card p-5 sm:p-6 rounded-2xl text-left lg:col-span-2">
+                            <h3 className="text-lg sm:text-xl font-semibold mb-4 text-[#C3E41D] geist-font flex items-center gap-2"><FaLightbulb /> Other Skills</h3>
                             <div className="flex flex-wrap gap-2">
                                 {[
-                                    {name: "R&D", icon: <FaFlask />}, {name: "Leadership", icon: <FaUsers />}, {name: "People Management", icon: <FaUserTie />}, 
-                                    {name: "Communication", icon: <FaComments />}, {name: "Teamwork", icon: <FaHandsHelping />}, 
-                                    {name: "Linux", icon: <FaLinux />}, {name: "Windows", icon: <FaWindows />}
+                                    {name: "Problem Solving", icon: <FaLightbulb />}, {name: "Research", icon: <FaFlask />}, 
+                                    {name: "Teamwork", icon: <FaUsers />}, {name: "Leadership", icon: <FaUserTie />}, 
+                                    {name: "Communication", icon: <FaComments />}, {name: "Adaptability", icon: <FaHandsHelping />}
                                 ].map(skill => (
-                                    <span key={skill.name} className="skill-badge px-3 py-1.5 rounded-md text-sm text-muted-foreground inter-font flex items-center gap-2">
-                                        <span className="text-pink-400">{skill.icon}</span> {skill.name}
+                                    <span key={skill.name} className="skill-badge px-3 py-1.5 rounded-md text-xs sm:text-sm text-muted-foreground inter-font flex items-center gap-2">
+                                        <span className="text-yellow-400">{skill.icon}</span> {skill.name}
                                     </span>
                                 ))}
                             </div>
@@ -393,23 +393,24 @@ const PortfolioPage = ({
                 </div>
 
                 <div className="divider mb-16" />
-                
-                <div id="experience" className="max-w-4xl mx-auto mb-16 px-6">
-                    <h2 className="text-3xl font-bold text-foreground mb-8 geist-font text-center">
+
+                {/* Internship Experience */}
+                <div id="internship" className="max-w-6xl mx-auto mb-16 px-4 sm:px-6">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-8 md:mb-12 geist-font text-center">
                         Internship Experience
                     </h2>
-                    <div className="glass-card p-8 rounded-2xl text-left float-animation group relative overflow-hidden">
+                    <div className="glass-card p-5 sm:p-8 rounded-2xl text-left float-animation group relative overflow-hidden">
                         <div className="absolute top-0 left-0 w-2 h-full bg-[#C3E41D]"></div>
-                        <h3 className="text-2xl font-bold text-[#C3E41D] geist-font mb-1">Salem Steel Plant</h3>
-                        <p className="text-lg text-foreground mb-4 font-medium inter-font">(Steel Authority of India Limited)</p>
+                        <h3 className="text-xl sm:text-2xl font-bold text-[#C3E41D] geist-font mb-1">Salem Steel Plant</h3>
+                        <p className="text-base sm:text-lg text-foreground mb-4 font-medium inter-font">(Steel Authority of India Limited)</p>
                         
-                        <div className="space-y-2 text-muted-foreground inter-font text-md mb-6">
-                            <p className="flex items-center gap-2"><span className="font-semibold text-gray-300 w-24">Role:</span> Intern (Electrical Maintenance)</p>
-                            <p className="flex items-center gap-2"><span className="font-semibold text-gray-300 w-24">Duration:</span> 11-12-2025 to 24-12-2025</p>
-                            <p className="flex items-center gap-2"><span className="font-semibold text-gray-300 w-24">Session:</span> 2:00 PM – 5:00 PM</p>
-                            <p className="flex items-center gap-2"><span className="font-semibold text-gray-300 w-24">Location:</span> Salem, Tamil Nadu</p>
+                        <div className="space-y-2 text-muted-foreground inter-font text-sm sm:text-base mb-6">
+                            <p className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2"><span className="font-semibold text-gray-300 sm:w-24">Role:</span> <span>Intern (Electrical Maintenance)</span></p>
+                            <p className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2"><span className="font-semibold text-gray-300 sm:w-24">Duration:</span> <span>11-12-2025 to 24-12-2025</span></p>
+                            <p className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2"><span className="font-semibold text-gray-300 sm:w-24">Session:</span> <span>2:00 PM – 5:00 PM</span></p>
+                            <p className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2"><span className="font-semibold text-gray-300 sm:w-24">Location:</span> <span>Salem, Tamil Nadu</span></p>
                         </div>
-                        <button onClick={() => setShowCertificates(true)} className="glass-button px-6 py-2 rounded-full text-sm font-semibold text-foreground flex items-center gap-2 border-[#C3E41D]/30 hover:border-[#C3E41D]">
+                        <button onClick={() => setShowCertificates(true)} className="glass-button px-5 py-2 rounded-full text-xs sm:text-sm font-semibold text-foreground flex items-center gap-2 border-[#C3E41D]/30 hover:border-[#C3E41D]">
                             View Certificate
                         </button>
                     </div>
@@ -418,46 +419,46 @@ const PortfolioPage = ({
                 <div className="divider mb-16" />
 
                 {/* Leadership Section */}
-                <div id="leadership" className="max-w-7xl mx-auto mb-16 px-6">
-                    <h2 className="text-4xl font-bold text-foreground mb-12 geist-font text-center">
+                <div id="leadership" className="max-w-7xl mx-auto mb-16 px-4 sm:px-6">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-8 md:mb-12 geist-font text-center">
                         Leadership & Coordinating
                     </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                         
                         {/* 1. Symposium President */}
-                        <div className="glass-card p-6 rounded-2xl text-left float-animation group relative overflow-hidden">
-                            <h3 className="text-xl font-bold text-[#C3E41D] geist-font mb-2">Department Symposium President</h3>
-                            <p className="text-muted-foreground text-sm inter-font mb-6">Led the organization and execution of the annual department-level tech symposium.</p>
+                        <div className="glass-card p-5 sm:p-6 rounded-2xl text-left float-animation group relative overflow-hidden">
+                            <h3 className="text-lg sm:text-xl font-bold text-[#C3E41D] geist-font mb-2">Department Symposium President</h3>
+                            <p className="text-muted-foreground text-xs sm:text-sm inter-font mb-6">Led the organization and execution of the annual department-level tech symposium.</p>
                             <button onClick={() => setPhotoModal({
                                 show: true,
                                 title: 'Symposium Gallery',
                                 images: Array.from({length: 23}, (_, i) => `/symposium/img-${i+1}.jpeg`).concat(Array.from({length: 11}, (_, i) => `/symposium/sympo-${i+1}.jpg`))
-                            })} className="glass-button px-4 py-2 rounded-full text-sm font-semibold text-foreground flex items-center gap-2 border-[#C3E41D]/30 hover:border-[#C3E41D]">
+                            })} className="glass-button px-4 py-2 rounded-full text-xs sm:text-sm font-semibold text-foreground flex items-center gap-2 border-[#C3E41D]/30 hover:border-[#C3E41D]">
                                 View Photos
                             </button>
                         </div>
 
                         {/* 2. Quiz Coordinator */}
-                        <div className="glass-card p-6 rounded-2xl text-left float-animation group relative overflow-hidden" style={{ animationDelay: '0.2s' }}>
-                            <h3 className="text-xl font-bold text-[#C3E41D] geist-font mb-2">Department Quiz Coordinator</h3>
-                            <p className="text-muted-foreground text-sm inter-font mb-4">Coordinated logistics and question sets for the department-level technical quiz.</p>
+                        <div className="glass-card p-5 sm:p-6 rounded-2xl text-left float-animation group relative overflow-hidden" style={{ animationDelay: '0.2s' }}>
+                            <h3 className="text-lg sm:text-xl font-bold text-[#C3E41D] geist-font mb-2">Department Quiz Coordinator</h3>
+                            <p className="text-muted-foreground text-xs sm:text-sm inter-font mb-4">Coordinated logistics and question sets for the department-level technical quiz.</p>
                         </div>
 
                         {/* 3. Class Quiz Organizer */}
-                        <div className="glass-card p-6 rounded-2xl text-left float-animation group relative overflow-hidden" style={{ animationDelay: '0.4s' }}>
-                            <h3 className="text-xl font-bold text-[#C3E41D] geist-font mb-2">Class Quiz Organizer</h3>
-                            <p className="text-muted-foreground text-sm inter-font mb-4">Organized engaging quiz sessions to foster knowledge sharing and healthy competition.</p>
+                        <div className="glass-card p-5 sm:p-6 rounded-2xl text-left float-animation group relative overflow-hidden" style={{ animationDelay: '0.4s' }}>
+                            <h3 className="text-lg sm:text-xl font-bold text-[#C3E41D] geist-font mb-2">Class Quiz Organizer</h3>
+                            <p className="text-muted-foreground text-xs sm:text-sm inter-font mb-4">Organized engaging quiz sessions to foster knowledge sharing and healthy competition.</p>
                         </div>
 
                         {/* 4. Cricket Team Captain */}
-                        <div className="glass-card p-6 rounded-2xl text-left float-animation group relative overflow-hidden" style={{ animationDelay: '0.6s' }}>
-                            <h3 className="text-xl font-bold text-[#C3E41D] geist-font mb-2">Inter-College Cricket Team Captain</h3>
-                            <p className="text-muted-foreground text-sm inter-font mb-6">Captained the college cricket team, strategizing matches and leading to victories.</p>
+                        <div className="glass-card p-5 sm:p-6 rounded-2xl text-left float-animation group relative overflow-hidden" style={{ animationDelay: '0.6s' }}>
+                            <h3 className="text-lg sm:text-xl font-bold text-[#C3E41D] geist-font mb-2">Inter-College Cricket Team Captain</h3>
+                            <p className="text-muted-foreground text-xs sm:text-sm inter-font mb-6">Captained the college cricket team, strategizing matches and leading to victories.</p>
                             <button onClick={() => setPhotoModal({
                                 show: true,
                                 title: 'Cricket Team Gallery',
                                 images: ['/cricket/cert1.jpeg', '/cricket/cert2.jpeg', '/cricket/img1.jpeg', '/cricket/img2.jpeg', '/cricket/img3.jpeg']
-                            })} className="glass-button px-4 py-2 rounded-full text-sm font-semibold text-foreground flex items-center gap-2 border-[#C3E41D]/30 hover:border-[#C3E41D]">
+                            })} className="glass-button px-4 py-2 rounded-full text-xs sm:text-sm font-semibold text-foreground flex items-center gap-2 border-[#C3E41D]/30 hover:border-[#C3E41D]">
                                 View Photos
                             </button>
                         </div>
@@ -466,121 +467,100 @@ const PortfolioPage = ({
                 </div>
 
                 <div className="divider mb-16" />
-                <div id="projects" className="max-w-7xl mx-auto mb-16 px-6">
-                    <h2 className="text-4xl font-bold text-foreground mb-12 geist-font text-center">
+                <div id="projects" className="max-w-7xl mx-auto mb-16 px-4 sm:px-6">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-8 md:mb-12 geist-font text-center">
                         Featured Projects
                     </h2>
                     
                     {/* Software Projects */}
                     <div className="mb-16">
-                        <h3 className="text-2xl font-semibold mb-6 text-[#C3E41D] geist-font border-b border-white/10 pb-2">Software Projects</h3>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            <div className="glass-card rounded-2xl p-6 text-left float-animation group">
-                                <div className="rounded-xl h-48 mb-4 overflow-hidden border border-white/10 relative">
+                        <h3 className="text-xl sm:text-2xl font-semibold mb-6 text-[#C3E41D] geist-font border-b border-white/10 pb-2">Software Projects</h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                            <div className="glass-card rounded-2xl p-5 sm:p-6 text-left float-animation group">
+                                <div className="rounded-xl h-40 sm:h-48 mb-4 overflow-hidden border border-white/10 relative">
                                     <video src="/pstex.mp4" autoPlay loop muted playsInline className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                 </div>
                                 <h3 className="text-lg font-medium text-card-foreground mb-2 geist-font">PS TEX</h3>
-                                <p className="text-muted-foreground text-sm inter-font mb-4">A comprehensive textile management system.</p>
+                                <p className="text-muted-foreground text-xs sm:text-sm inter-font mb-4">A comprehensive textile management system.</p>
                             </div>
                             <a href="https://ai-smart-education-system-1egk.vercel.app/" target="_blank" rel="noopener noreferrer" className="block cursor-pointer">
-                                <div className="glass-card rounded-2xl p-6 text-left float-animation group h-full" style={{ animationDelay: '0.2s' }}>
-                                    <div className="rounded-xl h-48 mb-4 overflow-hidden border border-white/10 relative">
+                                <div className="glass-card rounded-2xl p-5 sm:p-6 text-left float-animation group h-full" style={{ animationDelay: '0.2s' }}>
+                                    <div className="rounded-xl h-40 sm:h-48 mb-4 overflow-hidden border border-white/10 relative">
                                         <img src="/ai-smart-education.png" alt="Smart Education" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                     </div>
                                     <h3 className="text-lg font-medium text-card-foreground mb-2 geist-font group-hover:text-[#C3E41D] transition-colors">AI Smart Education System</h3>
-                                    <p className="text-muted-foreground text-sm inter-font mb-4">A smart platform integrating real-time weather data and AI.</p>
+                                    <p className="text-muted-foreground text-xs sm:text-sm inter-font mb-4">A smart platform integrating real-time weather data and AI.</p>
                                 </div>
                             </a>
-                            <div className="glass-card rounded-2xl p-6 text-left float-animation group" style={{ animationDelay: '0.4s' }}>
-                                <div className="rounded-xl h-48 mb-4 overflow-hidden border border-white/10 relative">
+                            <div className="glass-card rounded-2xl p-5 sm:p-6 text-left float-animation group" style={{ animationDelay: '0.4s' }}>
+                                <div className="rounded-xl h-40 sm:h-48 mb-4 overflow-hidden border border-white/10 relative">
                                     <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800" alt="Smart Employee" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                 </div>
                                 <h3 className="text-lg font-medium text-card-foreground mb-2 geist-font flex items-center justify-between gap-2 flex-wrap">
                                     Smart Employee Management System
-                                    <span className="text-xs font-semibold text-green-400 bg-green-500/10 border border-green-500/20 px-2 py-1 rounded-full">On Progress</span>
+                                    <span className="text-[10px] sm:text-xs font-semibold text-green-400 bg-green-500/10 border border-green-500/20 px-2 py-1 rounded-full">On Progress</span>
                                 </h3>
-                                <p className="text-muted-foreground text-sm inter-font mb-4">Internal tool to manage employee records and metrics.</p>
+                                <p className="text-muted-foreground text-xs sm:text-sm inter-font mb-4">An end-to-end platform for tracking employee metrics and shift workflows.</p>
                             </div>
                         </div>
                     </div>
 
-                    {/* Hybrid Projects */}
-                    <div className="mb-16">
-                        <h3 className="text-2xl font-semibold mb-6 text-[#C3E41D] geist-font border-b border-white/10 pb-2">Hybrid Projects</h3>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            <div className="glass-card rounded-2xl p-6 text-left float-animation group" style={{ animationDelay: '0.2s' }}>
-                                <div className="rounded-xl h-48 mb-4 overflow-hidden border border-white/10 relative">
+                    {/* Hardware & IoT Projects */}
+                    <div>
+                        <h3 className="text-xl sm:text-2xl font-semibold mb-6 text-[#C3E41D] geist-font border-b border-white/10 pb-2">Hardware Projects</h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                            
+                            {/* Weather Based Smart Education Video Project */}
+                            <div className="glass-card rounded-2xl p-5 sm:p-6 text-left float-animation group relative overflow-hidden">
+                                <div className="rounded-xl h-40 sm:h-48 mb-4 overflow-hidden border border-white/10 relative">
                                     <video src="/weather-smart-education.mp4" autoPlay loop muted playsInline className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                 </div>
-                                <h3 className="text-lg font-medium text-card-foreground mb-2 geist-font">AI-Based Smart irrigation</h3>
-                                <p className="text-muted-foreground text-sm inter-font mb-4">A smart irrigation system integrating real-time weather data and AI.</p>
+                                <h3 className="text-lg font-medium text-card-foreground mb-2 geist-font">Weather Based Smart Education System</h3>
+                                <p className="text-muted-foreground text-xs sm:text-sm inter-font mb-4">An IoT solution optimizing learning environments based on weather parameters.</p>
                             </div>
-                            <div className="glass-card rounded-2xl p-6 text-left float-animation group" style={{ animationDelay: '0.1s' }}>
-                                <div className="rounded-xl h-48 mb-4 overflow-hidden border border-white/10 relative">
-                                    <img src="https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?auto=format&fit=crop&q=80&w=800" alt="Emergency Response" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                                </div>
-                                <h3 className="text-lg font-medium text-card-foreground mb-2 geist-font">AI Based Emergency Response System</h3>
-                                <p className="text-muted-foreground text-sm inter-font mb-4">Critical emergency response monitoring using artificial intelligence.</p>
-                            </div>
-                            <div className="glass-card rounded-2xl p-6 text-left float-animation group" style={{ animationDelay: '0.3s' }}>
-                                <div className="rounded-xl h-48 mb-4 overflow-hidden border border-white/10 relative">
-                                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800" alt="Circuit" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                                </div>
-                                <h3 className="text-lg font-medium text-card-foreground mb-2 geist-font">SEED to CIRCUIT</h3>
-                                <p className="text-muted-foreground text-sm inter-font mb-4">Educational platform guiding students from basic concepts to circuit design.</p>
-                            </div>
-                            <div className="glass-card rounded-2xl p-6 text-left float-animation group" style={{ animationDelay: '0.5s' }}>
-                                <div className="rounded-xl h-48 mb-4 overflow-hidden border border-white/10 relative">
-                                    <video src="/home.mp4" autoPlay loop muted playsInline className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                                </div>
-                                <h3 className="text-lg font-medium text-card-foreground mb-2 geist-font">Smart Home Automation</h3>
-                                <p className="text-muted-foreground text-sm inter-font mb-4">IoT-based home automation allowing remote control of appliances.</p>
-                            </div>
-                            <div className="glass-card rounded-2xl p-6 text-left float-animation group" style={{ animationDelay: '0.7s' }}>
-                                <div className="rounded-xl h-48 mb-4 overflow-hidden border border-white/10 relative">
-                                    <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&q=80&w=800" alt="Smart City" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                                </div>
-                                <h3 className="text-lg font-medium text-card-foreground mb-2 geist-font">Smart City</h3>
-                                <p className="text-muted-foreground text-sm inter-font mb-4">Monitoring urban variables like traffic and pollution with edge devices.</p>
-                            </div>
-                        </div>
-                    </div>
 
-                    {/* Hardware Projects */}
-                    <div>
-                        <h3 className="text-2xl font-semibold mb-6 text-[#C3E41D] geist-font border-b border-white/10 pb-2">Hardware Projects</h3>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            <div className="glass-card rounded-2xl p-6 text-left float-animation group" style={{ animationDelay: '0.2s' }}>
-                                <div className="rounded-xl h-48 mb-4 overflow-hidden border border-white/10 relative">
-                                    <img src="https://images.unsplash.com/photo-1635350736475-c8cef4b21906?auto=format&fit=crop&q=80&w=800" alt="Hardware Sensor" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            {/* AI-Based Smart Irrigation */}
+                            <div className="glass-card rounded-2xl p-5 sm:p-6 text-left float-animation group relative overflow-hidden" style={{ animationDelay: '0.2s' }}>
+                                <div className="rounded-xl h-40 sm:h-48 mb-4 overflow-hidden border border-white/10 relative">
+                                    <img src="https://images.unsplash.com/photo-1563514227147-6d2ff665a6a0?auto=format&fit=crop&q=80&w=800" alt="Smart Irrigation" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                </div>
+                                <h3 className="text-lg font-medium text-card-foreground mb-2 geist-font">AI-Based Smart Irrigation System</h3>
+                                <p className="text-muted-foreground text-xs sm:text-sm inter-font mb-4">AI algorithms determining optimal watering cycles using soil moisture data.</p>
+                            </div>
+
+                            {/* LPG Gas Leakage Detector */}
+                            <div className="glass-card rounded-2xl p-5 sm:p-6 text-left float-animation group relative overflow-hidden" style={{ animationDelay: '0.4s' }}>
+                                <div className="rounded-xl h-40 sm:h-48 mb-4 overflow-hidden border border-white/10 relative">
+                                    <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=800" alt="LPG Gas Leakage Detector" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                 </div>
                                 <h3 className="text-lg font-medium text-card-foreground mb-2 geist-font">LPG Gas Leakage Detector</h3>
-                                <p className="text-muted-foreground text-sm inter-font mb-4">Safety mechanism capable of real-time monitoring of air quality.</p>
+                                <p className="text-muted-foreground text-xs sm:text-sm inter-font mb-4">Safety mechanism capable of real-time monitoring of air quality.</p>
                             </div>
+
                         </div>
                     </div>
                 </div>
                 <div className="divider mb-16" />
 
                 {/* Milestones & Awards */}
-                <div id="milestones" className="max-w-6xl mx-auto mb-32 px-6 relative mt-20">
-                    <h2 className="text-4xl font-bold text-foreground mb-24 geist-font text-center">
+                <div id="milestones" className="max-w-6xl mx-auto mb-24 md:mb-32 px-4 sm:px-6 relative mt-16 md:mt-20">
+                    <h2 className="text-2xl sm:text-4xl font-bold text-foreground mb-12 md:mb-24 geist-font text-center">
                         Milestones & Awards
                     </h2>
                     
                     <div className="relative">
                         {/* Main Vertical Path */}
-                        <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-2 bg-gradient-to-b from-[#C3E41D] via-[#4ade80] to-[#C3E41D] md:-translate-x-1/2 rounded-full shadow-[0_0_15px_rgba(195,228,29,0.5)]"></div>
+                        <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-1 md:w-2 bg-gradient-to-b from-[#C3E41D] via-[#4ade80] to-[#C3E41D] md:-translate-x-1/2 rounded-full shadow-[0_0_15px_rgba(195,228,29,0.5)]"></div>
                         
-                        <div className="space-y-24">
+                        <div className="space-y-12 md:space-y-24">
                             {milestonesData.map((categoryGroup, index) => {
                                 const isEven = index % 2 === 0;
                                 return (
                                     <div key={index} className={`relative flex flex-col md:flex-row items-start w-full ${isEven ? 'md:flex-row-reverse' : ''}`}>
                                         
                                         {/* Central Map Pin */}
-                                        <div className="absolute left-8 md:left-1/2 -translate-x-1/2 flex flex-col items-center justify-center z-10 top-0">
-                                            <div className="map-pin">
+                                        <div className="absolute left-4 md:left-1/2 -translate-x-1/2 flex flex-col items-center justify-center z-10 top-0">
+                                            <div className="map-pin scale-75 md:scale-100">
                                                 <div className="map-pin-inner"></div>
                                             </div>
                                         </div>
@@ -588,28 +568,28 @@ const PortfolioPage = ({
                                         {/* Spacer for the other half */}
                                         <div className="hidden md:block md:w-1/2"></div>
                                         
-                                        {/* Content Card with dashed pole connecting to center */}
-                                        <div className={`w-full md:w-1/2 relative flex flex-col ${isEven ? 'items-start md:pl-16 md:pr-4' : 'items-start md:items-end md:pr-16 md:pl-4'} pl-24 pt-0`}>
+                                        {/* Content Card */}
+                                        <div className={`w-full md:w-1/2 relative flex flex-col ${isEven ? 'items-start md:pl-16 md:pr-4' : 'items-start md:items-end md:pr-16 md:pl-4'} pl-10 md:pl-16 pt-0`}>
                                             
-                                            {/* Dashed Pole (Horizontal connector) */}
+                                            {/* Dashed Pole (Horizontal connector for desktop) */}
                                             <div className={`hidden md:block absolute top-[17px] w-12 border-t-2 border-dashed border-[#C3E41D] ${isEven ? 'left-4' : 'right-4'}`}></div>
 
-                                            <h3 className="text-3xl font-bold text-[#C3E41D] geist-font mb-6">{categoryGroup.category}</h3>
+                                            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#C3E41D] geist-font mb-4 sm:mb-6 mt-0.5 md:mt-0">{categoryGroup.category}</h3>
                                             
-                                            <div className="flex flex-col gap-6 w-full">
+                                            <div className="flex flex-col gap-4 sm:gap-6 w-full">
                                                 {categoryGroup.items.map(item => (
-                                                    <div key={item.id} className="glass-card p-6 rounded-2xl text-left float-animation group relative overflow-hidden transition-all hover:bg-white/5 border border-white/5 hover:border-[#C3E41D]/50 w-full">
-                                                        <h4 className="text-lg font-bold text-white geist-font mb-1">{item.title}</h4>
-                                                        <p className="text-[#C3E41D] font-medium inter-font mb-1 text-sm">{item.role}</p>
-                                                        <p className="text-muted-foreground text-sm inter-font mb-4 flex items-center gap-2">
-                                                            <svg className="w-4 h-4 opacity-70 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                                                            <span className="truncate">{item.location}</span>
+                                                    <div key={item.id} className="glass-card p-4 sm:p-6 rounded-2xl text-left float-animation group relative overflow-hidden transition-all hover:bg-white/5 border border-white/5 hover:border-[#C3E41D]/50 w-full">
+                                                        <h4 className="text-base sm:text-lg font-bold text-white geist-font mb-1">{item.title}</h4>
+                                                        <p className="text-[#C3E41D] font-medium inter-font mb-1 text-xs sm:text-sm">{item.role}</p>
+                                                        <p className="text-muted-foreground text-xs sm:text-sm inter-font mb-4 flex items-start gap-2 break-words">
+                                                            <svg className="w-4 h-4 opacity-70 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                                            <span className="break-words">{item.location}</span>
                                                         </p>
                                                         <button onClick={() => setPhotoModal({
                                                             show: true,
                                                             title: `${item.location} - ${item.category}`,
                                                             images: item.images
-                                                        })} className="glass-button px-4 py-1.5 rounded-full text-xs font-semibold text-foreground flex items-center gap-2 border-white/10 hover:border-[#C3E41D] w-fit">
+                                                        })} className="glass-button px-3.5 py-1.5 rounded-full text-xs font-semibold text-foreground flex items-center gap-2 border-white/10 hover:border-[#C3E41D] w-fit">
                                                             View Certificates
                                                         </button>
                                                     </div>

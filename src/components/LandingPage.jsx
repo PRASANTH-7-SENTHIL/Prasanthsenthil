@@ -219,24 +219,24 @@ export default function LandingPage() {
               animation: float 6s ease-in-out infinite;
             }
           `}</style>
-          <div className="relative text-center animate-float">
-            <div>
+          <div className="relative text-center animate-float flex flex-col items-center w-full">
+            <div className="w-full max-w-full overflow-hidden px-2">
               <BlurText
                 text="PRASANTH"
                 delay={80}
                 animateBy="letters"
                 direction="top"
-                className="font-bold text-[50px] sm:text-[80px] md:text-[110px] lg:text-[150px] leading-[0.8] tracking-tighter uppercase justify-center whitespace-nowrap"
+                className="font-bold text-[12vw] sm:text-[80px] md:text-[110px] lg:text-[150px] leading-[0.8] tracking-tighter uppercase justify-center"
                 style={{ color: "#C3E41D" }}
               />
             </div>
-            <div className="mt-4 md:mt-8">
+            <div className="mt-4 md:mt-8 w-full max-w-full overflow-hidden px-2">
               <BlurText
                 text="SENTHIL KUMAR"
                 delay={50}
                 animateBy="letters"
                 direction="top"
-                className="font-bold text-[35px] sm:text-[50px] md:text-[70px] lg:text-[100px] leading-[0.8] tracking-tighter uppercase justify-center whitespace-nowrap"
+                className="font-bold text-[8vw] sm:text-[50px] md:text-[70px] lg:text-[100px] leading-[0.8] tracking-tighter uppercase justify-center"
                 style={{ color: "#C3E41D" }}
               />
             </div>
