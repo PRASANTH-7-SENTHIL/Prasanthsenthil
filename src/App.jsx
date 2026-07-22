@@ -6,9 +6,11 @@ import PortfolioPage from './components/PortfolioPage';
 
 const HomePage = () => {
   return (
-    <div className="w-full flex flex-col">
-      <LandingPage isEmbedded={true} />
-      <div id="portfolio-section" className="w-full">
+    <div className="w-full h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth hide-scrollbar">
+      <div className="w-full h-screen snap-start snap-always relative overflow-hidden">
+        <LandingPage isEmbedded={true} />
+      </div>
+      <div id="portfolio-section" className="w-full min-h-screen snap-start snap-always relative">
         <PortfolioPage />
       </div>
     </div>
