@@ -104,6 +104,61 @@ export default function LandingPage({ isEmbedded = false }) {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isMenuOpen]);
 
+  useEffect(() => {
+    if (!isEmbedded) return;
+
+    let isScrolling = false;
+
+    const handleWheel = (e) => {
+      const parentContainer = document.getElementById("main-scroll-container");
+      const currentScroll = parentContainer ? parentContainer.scrollTop : window.scrollY;
+      
+      if (currentScroll < 50 && e.deltaY > 0 && !isScrolling) {
+        isScrolling = true;
+        const portfolioSection = document.getElementById("portfolio-section");
+        if (portfolioSection) {
+          portfolioSection.scrollIntoView({ behavior: "smooth" });
+        }
+        setTimeout(() => {
+          isScrolling = false;
+        }, 800);
+      }
+    };
+
+    let touchStartY = 0;
+    const handleTouchStart = (e) => {
+      touchStartY = e.touches[0].clientY;
+    };
+
+    const handleTouchEnd = (e) => {
+      const parentContainer = document.getElementById("main-scroll-container");
+      const currentScroll = parentContainer ? parentContainer.scrollTop : window.scrollY;
+      const touchEndY = e.changedTouches[0].clientY;
+      const diffY = touchStartY - touchEndY;
+
+      if (currentScroll < 50 && diffY > 20 && !isScrolling) {
+        isScrolling = true;
+        const portfolioSection = document.getElementById("portfolio-section");
+        if (portfolioSection) {
+          portfolioSection.scrollIntoView({ behavior: "smooth" });
+        }
+        setTimeout(() => {
+          isScrolling = false;
+        }, 800);
+      }
+    };
+
+    window.addEventListener("wheel", handleWheel, { passive: true });
+    window.addEventListener("touchstart", handleTouchStart, { passive: true });
+    window.addEventListener("touchend", handleTouchEnd, { passive: true });
+
+    return () => {
+      window.removeEventListener("wheel", handleWheel);
+      window.removeEventListener("touchstart", handleTouchStart);
+      window.removeEventListener("touchend", handleTouchEnd);
+    };
+  }, [isEmbedded]);
+
   const toggleTheme = () => {
     const newTheme = !isDark;
     setIsDark(newTheme);

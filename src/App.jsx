@@ -6,7 +6,7 @@ import PortfolioPage from './components/PortfolioPage';
 
 const HomePage = () => {
   return (
-    <div className="w-full h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth hide-scrollbar">
+    <div id="main-scroll-container" className="w-full h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth hide-scrollbar">
       <div className="w-full h-screen snap-start snap-always relative overflow-hidden">
         <LandingPage isEmbedded={true} />
       </div>
