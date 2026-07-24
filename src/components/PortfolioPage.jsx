@@ -587,7 +587,7 @@ const PortfolioPage = ({
                             <span className="text-xs font-normal text-muted-foreground inter-font">(Scroll &rarr;)</span>
                         </h3>
                         <div className="horizontal-scroll-container">
-                            <a href="https://ps-tex-production.up.railway.app" target="_blank" rel="noopener noreferrer" className="block cursor-pointer horizontal-scroll-item">
+                            <a href="https://ps-tex.vercel.app/" target="_blank" rel="noopener noreferrer" className="block cursor-pointer horizontal-scroll-item">
                                 <div className="glass-card rounded-2xl p-5 sm:p-6 text-left float-animation group h-full">
                                     <div className="rounded-xl h-40 sm:h-48 mb-4 overflow-hidden border border-white/10 relative">
                                         <video src="https://res.cloudinary.com/dguzreg8w/video/upload/v1784656652/portfolio/pstex.mp4" autoPlay loop muted playsInline webkit-playsinline="true" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
