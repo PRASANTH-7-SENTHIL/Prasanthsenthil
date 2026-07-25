@@ -605,16 +605,18 @@ const PortfolioPage = ({
                                     <p className="text-muted-foreground text-xs sm:text-sm inter-font mb-4">A smart platform integrating real-time weather data and AI.</p>
                                 </div>
                             </a>
-                            <div className="glass-card rounded-2xl p-5 sm:p-6 text-left float-animation group horizontal-scroll-item" style={{ animationDelay: '0.4s' }}>
-                                <div className="rounded-xl h-40 sm:h-48 mb-4 overflow-hidden border border-white/10 relative">
-                                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800" alt="Smart Employee" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            <a href="https://sems2026.vercel.app/" target="_blank" rel="noopener noreferrer" className="block cursor-pointer horizontal-scroll-item">
+                                <div className="glass-card rounded-2xl p-5 sm:p-6 text-left float-animation group h-full" style={{ animationDelay: '0.4s' }}>
+                                    <div className="rounded-xl h-40 sm:h-48 mb-4 overflow-hidden border border-white/10 relative">
+                                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800" alt="Smart Employee" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                    </div>
+                                    <h3 className="text-lg font-medium text-card-foreground mb-2 geist-font group-hover:text-[#C3E41D] transition-colors flex items-center justify-between gap-2 flex-wrap">
+                                        Smart Employee Management System
+                                        <span className="text-[10px] sm:text-xs font-semibold text-green-400 bg-green-500/10 border border-green-500/20 px-2 py-1 rounded-full">Live</span>
+                                    </h3>
+                                    <p className="text-muted-foreground text-xs sm:text-sm inter-font mb-4">An end-to-end platform for tracking employee metrics and shift workflows.</p>
                                 </div>
-                                <h3 className="text-lg font-medium text-card-foreground mb-2 geist-font flex items-center justify-between gap-2 flex-wrap">
-                                    Smart Employee Management System
-                                    <span className="text-[10px] sm:text-xs font-semibold text-green-400 bg-green-500/10 border border-green-500/20 px-2 py-1 rounded-full">On Progress</span>
-                                </h3>
-                                <p className="text-muted-foreground text-xs sm:text-sm inter-font mb-4">An end-to-end platform for tracking employee metrics and shift workflows.</p>
-                            </div>
+                            </a>
                         </div>
                     </div>
 

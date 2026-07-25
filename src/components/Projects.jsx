@@ -11,6 +11,13 @@ const projects = [
     github: "#"
   },
   {
+    title: "Smart Employee Management System",
+    description: "An end-to-end platform for tracking employee metrics, attendance, and shift workflows.",
+    tags: ["React", "Node.js", "Management", "Tailwind"],
+    demo: "https://sems2026.vercel.app/",
+    github: "#"
+  },
+  {
     title: "AI Smart Education System",
     description: "A comprehensive platform using an AI agent for adaptive learning, automated grading, and personalized student assistance.",
     tags: ["AWS", "AI", "MongoDB", "Express"],
