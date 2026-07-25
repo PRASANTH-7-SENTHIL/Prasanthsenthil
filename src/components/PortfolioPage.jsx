@@ -633,7 +633,7 @@ const PortfolioPage = ({
                             <a href="https://sems2026.vercel.app/" target="_blank" rel="noopener noreferrer" className="block cursor-pointer horizontal-scroll-item">
                                 <div className="glass-card rounded-2xl p-5 sm:p-6 text-left float-animation group h-full" style={{ animationDelay: '0.4s' }}>
                                     <div className="rounded-xl h-40 sm:h-48 mb-4 overflow-hidden border border-white/10 relative">
-                                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800" alt="Smart Employee" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                        <img src="/sems.png" alt="Smart Employee" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                     </div>
                                     <h3 className="text-lg font-medium text-card-foreground mb-2 geist-font group-hover:text-[#C3E41D] transition-colors flex items-center justify-between gap-2 flex-wrap">
                                         Smart Employee Management System

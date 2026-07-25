@@ -15,7 +15,8 @@ const projects = [
     description: "An end-to-end platform for tracking employee metrics, attendance, and shift workflows.",
     tags: ["React", "Node.js", "Management", "Tailwind"],
     demo: "https://sems2026.vercel.app/",
-    github: "#"
+    github: "#",
+    image: "/sems.png"
   },
   {
     title: "AI Smart Education System",
@@ -125,6 +126,22 @@ const ProjectCard = ({ project, idx }) => {
                   </a>
                 )}
               </div>
+            </div>
+          </>
+        ) : project.image ? (
+          <>
+            <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+              {project.github !== "#" && (
+                <a href={project.github} target="_blank" rel="noopener noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-white/30 text-white transition">
+                  <FiGithub size={20} />
+                </a>
+              )}
+              {project.demo !== "#" && (
+                <a href={project.demo} target="_blank" rel="noopener noreferrer" className="p-3 bg-neon/20 rounded-full hover:bg-neon text-white transition border border-neon/50">
+                  <FiExternalLink size={20} />
+                </a>
+              )}
             </div>
           </>
         ) : (
