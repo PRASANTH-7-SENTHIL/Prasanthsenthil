@@ -42,7 +42,18 @@ const Hero = () => {
           </div>
 
           <div className="flex items-center gap-6 justify-center lg:justify-start mt-8 pb-4">
-            <a href="#projects" className="px-8 py-3 rounded-xl bg-neon text-white font-semibold hover:bg-neon/90 hover:shadow-lg hover:shadow-neon/40 transition-all transform hover:-translate-y-1">
+            <a 
+              href="#projects" 
+              onClick={(e) => {
+                e.preventDefault();
+                const el = document.getElementById('projects');
+                if (el) {
+                  el.scrollIntoView({ behavior: 'smooth' });
+                }
+                window.location.hash = '#projects';
+              }}
+              className="px-8 py-3 rounded-xl bg-neon text-white font-semibold hover:bg-neon/90 hover:shadow-lg hover:shadow-neon/40 transition-all transform hover:-translate-y-1"
+            >
               View Projects
             </a>
             <a 

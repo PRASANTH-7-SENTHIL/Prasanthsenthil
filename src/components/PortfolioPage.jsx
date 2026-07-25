@@ -331,7 +331,22 @@ const PortfolioPage = ({
                 </div>
                 <div className="hidden md:flex items-center space-x-8">
                     {navLinks.map(link => (
-                        <a key={link.label} href={link.href} className="text-muted-foreground hover:text-foreground transition-colors inter-font text-sm">{link.label}</a>
+                        <a 
+                          key={link.label} 
+                          href={link.href} 
+                          onClick={(e) => {
+                            const targetId = link.href.replace('#', '');
+                            const el = document.getElementById(targetId);
+                            if (el) {
+                              e.preventDefault();
+                              el.scrollIntoView({ behavior: 'smooth' });
+                              window.location.hash = link.href;
+                            }
+                          }}
+                          className="text-muted-foreground hover:text-foreground transition-colors inter-font text-sm"
+                        >
+                          {link.label}
+                        </a>
                     ))}
                 </div>
                 <button onClick={resume.onClick} className="glass-button px-4 py-2 rounded-lg text-foreground text-sm font-medium inter-font">{resume.label}</button>
@@ -394,7 +409,17 @@ const PortfolioPage = ({
                     </div>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-4">
-                    <button onClick={() => { window.location.hash = '#projects'; }} className="primary-button px-6 py-3 rounded-lg font-medium text-sm w-full sm:w-auto min-w-[160px]">
+                    <button 
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const el = document.getElementById('projects');
+                        if (el) {
+                          el.scrollIntoView({ behavior: 'smooth' });
+                        }
+                        window.location.hash = '#projects';
+                      }} 
+                      className="primary-button px-6 py-3 rounded-lg font-medium text-sm w-full sm:w-auto min-w-[160px]"
+                    >
                       View Projects
                     </button>
                     <button onClick={() => window.open('/resume.pdf', '_blank')} className="glass-button w-full sm:w-auto min-w-[160px] inter-font text-sm font-medium text-foreground rounded-lg px-6 py-3">
