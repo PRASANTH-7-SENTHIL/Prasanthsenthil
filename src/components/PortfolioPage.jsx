@@ -349,7 +349,16 @@ const PortfolioPage = ({
                         </a>
                     ))}
                 </div>
-                <button onClick={resume.onClick} className="glass-button px-4 py-2 rounded-lg text-foreground text-sm font-medium inter-font">{resume.label}</button>
+                <div className="flex items-center gap-3">
+                  <button onClick={resume.onClick} className="glass-button px-4 py-2 rounded-lg text-foreground text-sm font-medium inter-font">{resume.label}</button>
+                  <a
+                    href="mailto:prasanthsenthilkumar09@gmail.com"
+                    className="flex items-center gap-2 px-4 py-2 rounded-lg border border-cyan-500/40 bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 text-sm font-semibold transition-all hover:scale-105"
+                  >
+                    <FaPaperPlane size={12} className="text-cyan-400" />
+                    <span>Hire Me</span>
+                  </a>
+                </div>
             </div>
         </nav>
         <main id="about" className="w-full min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 py-12 md:py-20 overflow-x-hidden">
