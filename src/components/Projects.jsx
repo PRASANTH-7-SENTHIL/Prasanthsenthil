@@ -56,12 +56,12 @@ const projects = [
     github: "#"
   },
   {
-    title: "Weather Based Smart Education",
-    description: "A smart system integrating real-time weather data to optimize environments and scheduling.",
-    tags: ["React", "IoT", "Weather API"],
+    title: "AI-Based Smart Irrigation System",
+    description: "AI algorithms determining optimal watering cycles using soil moisture data and weather parameters.",
+    tags: ["IoT", "AI", "Arduino", "Sensors"],
     demo: "#",
     github: "#",
-    video: "https://media.githubusercontent.com/media/PRASANTH-7-SENTHIL/Prasanthsenthil/main/public/weather-smart-education.mp4"
+    video: "https://res.cloudinary.com/dguzreg8w/video/upload/v1784711065/portfolio/weather-smart-education.mp4"
   },
   {
     title: "Smart City",
