@@ -86,7 +86,7 @@ const Hero = () => {
           <div className="w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full relative overflow-hidden card-glow flex items-center justify-center border-4 border-white/10 group">
             {/* The profile image saved in the public folder */}
             <img 
-              src="/profile.png" 
+              src="https://res.cloudinary.com/oaktnbdl/image/upload/v1790166826/portfolio/root/profile.png" 
               alt="Prasanth S Profile" 
               className="w-full h-full object-cover object-[center_top] transition-transform duration-500 group-hover:scale-105" 
             />

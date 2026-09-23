@@ -1,29 +1,35 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #1a1a2e;
-  --color-secondary: #16213e;
-  --color-accent: #0f3460;
-  --color-neon: #e94560;
-  --font-poppins: "Poppins", "sans-serif";
-  --font-inter: "Inter", "sans-serif";
+  --color-primary: #0a051b;
+  --color-secondary: #13092c;
+  --color-accent: #6b21a8;
+  --color-neon: #a855f7;
+  --font-poppins: "Times New Roman", Times, serif;
+  --font-inter: "Times New Roman", Times, serif;
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
+    font-family: "Times New Roman", Times, serif;
   }
   body {
-    @apply bg-[#0f172a] text-slate-50 font-poppins overflow-x-hidden;
+    @apply bg-[#060312] text-slate-50 overflow-x-hidden;
+    font-family: "Times New Roman", Times, serif !important;
+  }
+  
+  *, *::before, *::after, input, button, textarea, select {
+    font-family: "Times New Roman", Times, serif !important;
   }
 }
 
 @layer utilities {
   .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-[#e94560];
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-violet-300 to-indigo-400;
   }
   .card-glow {
-    @apply shadow-[0_0_15px_rgba(233,69,96,0.3)] hover:shadow-[0_0_25px_rgba(233,69,96,0.6)] transition-shadow duration-300;
+    @apply shadow-[0_0_15px_rgba(124,58,237,0.3)] hover:shadow-[0_0_25px_rgba(124,58,237,0.6)] transition-shadow duration-300;
   }
   .glass-card {
     @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl;

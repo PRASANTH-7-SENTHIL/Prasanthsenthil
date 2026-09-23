@@ -46,7 +46,7 @@ const Internship = () => {
   const [activePhoto, setActivePhoto] = useState(0);
   
   const photos = [
-    '/internship/internship-2.jpg'
+    'https://res.cloudinary.com/oaktnbdl/image/upload/v1790166769/portfolio/internship/internship-2.jpg'
   ];
 
   return (

@@ -16,7 +16,7 @@ const projects = [
     tags: ["React", "Node.js", "Management", "Tailwind"],
     demo: "https://sems2026.vercel.app/",
     github: "#",
-    image: "/sems.png"
+    image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166847/portfolio/root/sems.png"
   },
   {
     title: "AI Smart Education System",

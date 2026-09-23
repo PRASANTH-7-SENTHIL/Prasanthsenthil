@@ -6,29 +6,22 @@ import { FiChevronRight, FiImage, FiAward, FiUsers, FiTarget, FiActivity } from 
 const roles = [
   {
     id: 1,
-    title: 'Department Symposium President',
-    desc: 'Led the organization and execution of the annual department-level tech symposium.',
+    title: 'Department SYMPOSIUM',
+    desc: 'Led the organization and execution of the annual department-level tech symposium as President.',
     path: '/symposium',
     icon: <FiUsers className="w-8 h-8" />
   },
   {
     id: 2,
-    title: 'Department Quiz Coordinator',
-    desc: 'Coordinated logistics and question sets for the department-level technical quiz.',
-    path: '/quiz-department',
+    title: 'Event coordinating',
+    desc: 'Coordinated logistics, technical quiz competitions, and event management across department forums.',
+    path: '/symposium',
     icon: <FiAward className="w-8 h-8" />
   },
   {
     id: 3,
-    title: 'Class Quiz Organizer',
-    desc: 'Organized engaging quiz sessions to foster knowledge sharing and healthy competition.',
-    path: '/quiz-class',
-    icon: <FiTarget className="w-8 h-8" />
-  },
-  {
-    id: 4,
-    title: 'Inter-College Cricket Team Captain',
-    desc: 'Captained the college cricket team, strategizing matches and leading to victories.',
+    title: 'Sport leading',
+    desc: 'Captained the college cricket team with strategy and teamwork, clinching the ₹4000 cash award.',
     path: '/cricket',
     icon: <FiActivity className="w-8 h-8" />
   }
@@ -54,7 +47,7 @@ const Leadership = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {roles.map((role, index) => (
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}

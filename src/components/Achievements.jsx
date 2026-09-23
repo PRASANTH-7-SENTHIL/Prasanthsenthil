@@ -10,8 +10,8 @@ const achievements = [
     icon: <FiAward className="text-neon" size={24} />,
     color: "neon",
     certificates: [
-      { name: "Participate Certificate", image: "/certificates/hackathon_cert.jpeg" },
-      { name: "Best Innovation Award", image: "/certificates/award_cert.jpeg" }
+      { name: "Participate Certificate", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166535/portfolio/certificates/hackathon_cert.jpg" },
+      { name: "Best Innovation Award", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166529/portfolio/certificates/award_cert.jpg" }
     ]
   },
   {
@@ -21,13 +21,13 @@ const achievements = [
     icon: <FiStar className="text-yellow-400" size={24} />,
     color: "yellow-400",
     certificates: [
-      { name: "KPR Certificate", image: "/kpr_hackathon/kpr_certificate.jpeg" },
-      { name: "Hackathon Event", image: "/kpr_hackathon/img1.jpeg" },
-      { name: "Hackathon Event", image: "/kpr_hackathon/img2.jpeg" },
-      { name: "Hackathon Event", image: "/kpr_hackathon/img3.jpeg" },
-      { name: "Hackathon Event", image: "/kpr_hackathon/img4.jpeg" },
-      { name: "Hackathon Event", image: "/kpr_hackathon/img5.jpeg" },
-      { name: "Hackathon Event", image: "/kpr_hackathon/img6.jpeg" }
+      { name: "KPR Certificate", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166790/portfolio/kpr_hackathon/kpr_certificate.jpg" },
+      { name: "Hackathon Event", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166771/portfolio/kpr_hackathon/img1.jpg" },
+      { name: "Hackathon Event", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166774/portfolio/kpr_hackathon/img2.jpg" },
+      { name: "Hackathon Event", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166778/portfolio/kpr_hackathon/img3.jpg" },
+      { name: "Hackathon Event", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166785/portfolio/kpr_hackathon/img4.jpg" },
+      { name: "Hackathon Event", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166786/portfolio/kpr_hackathon/img5.jpg" },
+      { name: "Hackathon Event", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166788/portfolio/kpr_hackathon/img6.jpg" }
     ]
   },
   {
@@ -37,20 +37,20 @@ const achievements = [
     icon: <FiStar className="text-orange-400" size={24} />,
     color: "orange-400",
     certificates: [
-      { name: "SRM Certificate", image: "/srm_hackathon/srm_cert.jpeg" },
-      { name: "Hackathon Photo", image: "/srm_hackathon/img1.jpeg" },
-      { name: "Hackathon Photo", image: "/srm_hackathon/img2.jpeg" },
-      { name: "Hackathon Photo", image: "/srm_hackathon/img3.jpeg" },
-      { name: "Hackathon Photo", image: "/srm_hackathon/img4.jpeg" },
-      { name: "Hackathon Photo", image: "/srm_hackathon/img5.jpeg" },
-      { name: "Hackathon Photo", image: "/srm_hackathon/img6.jpeg" },
-      { name: "Hackathon Photo", image: "/srm_hackathon/img7.jpeg" },
-      { name: "Hackathon Photo", image: "/srm_hackathon/img8.jpeg" },
-      { name: "Hackathon Photo", image: "/srm_hackathon/img9.jpeg" },
-      { name: "Hackathon Photo", image: "/srm_hackathon/img10.jpeg" },
-      { name: "Hackathon Photo", image: "/srm_hackathon/img11.jpeg" },
-      { name: "Hackathon Photo", image: "/srm_hackathon/img12.jpeg" },
-      { name: "Hackathon Photo", image: "/srm_hackathon/img13.jpeg" }
+      { name: "SRM Certificate", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166885/portfolio/srm_hackathon/srm_cert.jpg" },
+      { name: "Hackathon Photo", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166864/portfolio/srm_hackathon/img1.jpg" },
+      { name: "Hackathon Photo", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166872/portfolio/srm_hackathon/img2.jpg" },
+      { name: "Hackathon Photo", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166874/portfolio/srm_hackathon/img3.jpg" },
+      { name: "Hackathon Photo", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166875/portfolio/srm_hackathon/img4.jpg" },
+      { name: "Hackathon Photo", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166877/portfolio/srm_hackathon/img5.jpg" },
+      { name: "Hackathon Photo", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166878/portfolio/srm_hackathon/img6.jpg" },
+      { name: "Hackathon Photo", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166880/portfolio/srm_hackathon/img7.jpg" },
+      { name: "Hackathon Photo", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166882/portfolio/srm_hackathon/img8.jpg" },
+      { name: "Hackathon Photo", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166884/portfolio/srm_hackathon/img9.jpg" },
+      { name: "Hackathon Photo", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166866/portfolio/srm_hackathon/img10.jpg" },
+      { name: "Hackathon Photo", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166868/portfolio/srm_hackathon/img11.jpg" },
+      { name: "Hackathon Photo", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166869/portfolio/srm_hackathon/img12.jpg" },
+      { name: "Hackathon Photo", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166871/portfolio/srm_hackathon/img13.jpg" }
     ]
   },
   {
@@ -60,10 +60,10 @@ const achievements = [
     icon: <FiAward className="text-blue-400" size={24} />,
     color: "blue-400",
     certificates: [
-      { name: "Paper Presentation Event", image: "/salem_paper/event.jpeg" },
-      { name: "Certificate", image: "/salem_paper/cert1.jpeg" },
-      { name: "Certificate", image: "/salem_paper/cert2.jpeg" },
-      { name: "Certificate", image: "/salem_paper/cert3.jpeg" }
+      { name: "Paper Presentation Event", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166844/portfolio/salem_paper/event.jpg" },
+      { name: "Certificate", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166838/portfolio/salem_paper/cert1.jpg" },
+      { name: "Certificate", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166840/portfolio/salem_paper/cert2.jpg" },
+      { name: "Certificate", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166842/portfolio/salem_paper/cert3.jpg" }
     ]
   },
   {
@@ -73,10 +73,10 @@ const achievements = [
     icon: <FiAward className="text-blue-400" size={24} />,
     color: "blue-400",
     certificates: [
-      { name: "Paper Presentation Event", image: "/sengunthar_paper/img1.jpeg" },
-      { name: "Paper Presentation Event", image: "/sengunthar_paper/img2.jpeg" },
-      { name: "Certificate", image: "/sengunthar_paper/cert1.jpeg" },
-      { name: "Certificate", image: "/sengunthar_paper/cert2.jpeg" }
+      { name: "Paper Presentation Event", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166853/portfolio/sengunthar_paper/img1.jpg" },
+      { name: "Paper Presentation Event", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166854/portfolio/sengunthar_paper/img2.jpg" },
+      { name: "Certificate", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166849/portfolio/sengunthar_paper/cert1.jpg" },
+      { name: "Certificate", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166851/portfolio/sengunthar_paper/cert2.jpg" }
     ]
   },
   {
@@ -86,12 +86,12 @@ const achievements = [
     icon: <FiAward className="text-purple-400" size={24} />,
     color: "purple-400",
     certificates: [
-      { name: "Project Expo Certificate", image: "/sona_expo/cert.jpeg" },
-      { name: "Project Expo Event", image: "/sona_expo/img1.jpeg" },
-      { name: "Project Expo Event", image: "/sona_expo/img2.jpeg" },
-      { name: "Project Expo Event", image: "/sona_expo/img3.jpeg" },
-      { name: "Project Expo Event", image: "/sona_expo/img4.jpeg" },
-      { name: "Project Expo Event", image: "/sona_expo/img5.jpeg" }
+      { name: "Project Expo Certificate", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166856/portfolio/sona_expo/cert.jpg" },
+      { name: "Project Expo Event", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166857/portfolio/sona_expo/img1.jpg" },
+      { name: "Project Expo Event", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166858/portfolio/sona_expo/img2.jpg" },
+      { name: "Project Expo Event", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166860/portfolio/sona_expo/img3.jpg" },
+      { name: "Project Expo Event", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166862/portfolio/sona_expo/img4.jpg" },
+      { name: "Project Expo Event", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166863/portfolio/sona_expo/img5.jpg" }
     ]
   },
   {
@@ -101,8 +101,8 @@ const achievements = [
     icon: <FiAward className="text-purple-400" size={24} />,
     color: "purple-400",
     certificates: [
-      { name: "Project Expo Certificate", image: "/gce_expo/cert1.jpeg" },
-      { name: "Project Expo Certificate", image: "/gce_expo/cert2.jpeg" }
+      { name: "Project Expo Certificate", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166569/portfolio/gce_expo/cert1.jpg" },
+      { name: "Project Expo Certificate", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166571/portfolio/gce_expo/cert2.jpg" }
     ]
   },
   {
@@ -112,11 +112,11 @@ const achievements = [
     icon: <FiStar className="text-green-400" size={24} />,
     color: "green-400",
     certificates: [
-      { name: "Ideathon Certificate", image: "/ideathon/cert.jpeg" },
-      { name: "Ideathon Photo", image: "/ideathon/img1.jpeg" },
-      { name: "Ideathon Photo", image: "/ideathon/img2.jpeg" },
-      { name: "Ideathon Photo", image: "/ideathon/img3.jpeg" },
-      { name: "Ideathon Photo", image: "/ideathon/img4.jpeg" }
+      { name: "Ideathon Certificate", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166741/portfolio/ideathon/cert.jpg" },
+      { name: "Ideathon Photo", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166743/portfolio/ideathon/img1.jpg" },
+      { name: "Ideathon Photo", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166745/portfolio/ideathon/img2.jpg" },
+      { name: "Ideathon Photo", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166763/portfolio/ideathon/img3.jpg" },
+      { name: "Ideathon Photo", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166765/portfolio/ideathon/img4.jpg" }
     ]
   },
   {
@@ -126,11 +126,11 @@ const achievements = [
     icon: <FiFlag className="text-[#FF9900]" size={24} />,
     color: "[#FF9900]",
     certificates: [
-      { name: "Conference Photo", image: "/annapoorana/img1.jpeg" },
-      { name: "Conference Photo", image: "/annapoorana/img2.jpeg" },
-      { name: "Conference Photo", image: "/annapoorana/img3.jpeg" },
-      { name: "Conference Photo", image: "/annapoorana/img4.jpeg" },
-      { name: "Conference Photo", image: "/annapoorana/img5.jpeg" }
+      { name: "Conference Photo", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166504/portfolio/annapoorana/img1.jpg" },
+      { name: "Conference Photo", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166515/portfolio/annapoorana/img2.jpg" },
+      { name: "Conference Photo", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166523/portfolio/annapoorana/img3.jpg" },
+      { name: "Conference Photo", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166526/portfolio/annapoorana/img4.jpg" },
+      { name: "Conference Photo", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166528/portfolio/annapoorana/img5.jpg" }
     ]
   },
   {
@@ -140,9 +140,9 @@ const achievements = [
     icon: <FiCamera className="text-pink-400" size={24} />,
     color: "pink-400",
     certificates: [
-      { name: "Photography Photo", image: "/photography/img1.jpeg" },
-      { name: "Photography Photo", image: "/photography/img2.jpeg" },
-      { name: "Photography Photo", image: "/photography/img3.jpeg" }
+      { name: "Photography Photo", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166817/portfolio/photography/img1.jpg" },
+      { name: "Photography Photo", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166819/portfolio/photography/img2.jpg" },
+      { name: "Photography Photo", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166821/portfolio/photography/img3.jpg" }
     ]
   },
   {
@@ -152,11 +152,11 @@ const achievements = [
     icon: <FiAward className="text-emerald-400" size={24} />,
     color: "emerald-400",
     certificates: [
-      { name: "Cricket Tournament Certificate", image: "/cricket/cert1.jpeg" },
-      { name: "Cricket Tournament Certificate", image: "/cricket/cert2.jpeg" },
-      { name: "Tournament Photo", image: "/cricket/img1.jpeg" },
-      { name: "Tournament Photo", image: "/cricket/img2.jpeg" },
-      { name: "Tournament Photo", image: "/cricket/img3.jpeg" }
+      { name: "Cricket Tournament Certificate", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166546/portfolio/cricket/cert1.jpg" },
+      { name: "Cricket Tournament Certificate", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166555/portfolio/cricket/cert2.jpg" },
+      { name: "Tournament Photo", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166561/portfolio/cricket/img1.jpg" },
+      { name: "Tournament Photo", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166564/portfolio/cricket/img2.jpg" },
+      { name: "Tournament Photo", image: "https://res.cloudinary.com/oaktnbdl/image/upload/v1790166565/portfolio/cricket/img3.jpg" }
     ]
   }
 ];
